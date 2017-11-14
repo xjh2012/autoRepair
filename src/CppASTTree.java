@@ -14,6 +14,7 @@ import java.util.List;
  */
 public class CppASTTree {
 
+    //存1，0
     private HashMap<IASTNode,Integer> nodeNumA = new HashMap<>();
     private HashMap<IASTNode,Integer> nodeNumB = new HashMap<>();
 
@@ -21,8 +22,8 @@ public class CppASTTree {
     private HashMap<HashMap<IASTNode, IASTNode>, Double> nodeSimilar= new HashMap<>();
 
     private int cnt = 0;
-    public List<IASTNode> A = new ArrayList<>();
-    public List<IASTNode> B = new ArrayList<>();
+    public List<IASTNode> notSameNodeA = new ArrayList<>();
+    public List<IASTNode> notSameNodeB = new ArrayList<>();
 
     public CppASTTree() {
         System.out.println( System.getProperty("user.dir") + File.separator + "testFiles" + File.separator);
@@ -43,10 +44,10 @@ public class CppASTTree {
        // matchNodes(tu, tuTmp);
 
         System.out.println("simpleTreeMatching : " + simpleTreeMatching(tu, tuTmp));
-        System.out.println("A Tree : ");
-        printNodes(tu, A, nodeNumA);
-        System.out.println("B Tree : ");
-        printNodes(tuTmp, B, nodeNumB);
+        //System.out.println("A Tree : ");
+       printNodes(tu, notSameNodeA, nodeNumA);
+       // System.out.println("B Tree : ");
+        printNodes(tuTmp, notSameNodeB, nodeNumB);
         //Create a tree that allows one selection at a time.
 
     }
@@ -83,7 +84,8 @@ public class CppASTTree {
         if(nodeNum.get(node) == 0 && node.getChildren().length != 0 && !node.getChildren()[0].getClass().getSimpleName().equals("CPPASTName")){
           //  if(node.getChildren()[0].getRawSignature())
             notSameNode.add(node);
-            System.out.println("print not same : " + node.getRawSignature());
+            //System.out.println("print not same : " + node.getRawSignature());
+
         }
 
         for (IASTNode child : node.getChildren()) {

@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.IOException;
+import java.util.Random;
 
 /**
  * 邱景 创建于 2017/1/24.
@@ -36,6 +37,10 @@ public class T {
         }
     }
 
+    public static int random(int scope) {
+        Random random = new Random();
+        return Math.abs(random.nextInt())%scope;
+    }
 
 
 }
