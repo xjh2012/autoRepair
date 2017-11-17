@@ -1,9 +1,11 @@
 import org.eclipse.cdt.core.dom.ast.IASTNode;
 import org.eclipse.cdt.core.dom.ast.IASTTranslationUnit;
 import org.eclipse.cdt.core.parser.ParserLanguage;
+import org.eclipse.core.runtime.CoreException;
 
 import javax.swing.tree.DefaultMutableTreeNode;
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -203,7 +205,7 @@ public class CppASTTree {
 
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CoreException, IOException {
         new CppASTTree();
     }
 }

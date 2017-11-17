@@ -1,5 +1,4 @@
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.Random;
 
 /**
@@ -34,6 +33,25 @@ public class T {
         } catch (IOException e) {
             e.printStackTrace();
             return "";
+        }
+    }
+
+    /**
+     * 写入文件内容
+     *
+     * @param fileName 要写入内容的文件名
+     * @param data 要写入的文件内容
+     * @return 文件内容
+     */
+    public static void writeFile(String fileName, String data) {
+        try {
+            FileWriter fw = new FileWriter(fileName);
+            fw.write(data,0,data.length());
+            fw.flush();
+            //Runtime.getRuntime().exec(fileName);
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
