@@ -80,7 +80,6 @@ public class SourceCompiler {
     private File binFile;
     
     private ProcessBuilder pb;
-    private Process pc;
     
     private int answerID;
     private DbListener dbl;
@@ -104,13 +103,54 @@ public class SourceCompiler {
         css = (CourseService)arg0.getBean("courseService");
         fs = (FileService)arg0.getBean("fileService");
     }
-    
-    public SourceCompiler(String sourceDir, String fileName, String lang,
-            DbListener listener, int anID, PrintWriter pw) throws IOException, InterruptedException {
+
+    //文件路径、文件名、语言、id、输出流
+    public SourceCompiler(String sourceDir, String fileName, String lang, int anID, PrintWriter pw) throws IOException, InterruptedException {
         language = lang;
         srcDir = sourceDir;
         srcFilePath = srcDir+"/"+ fileName;
-        
+
+        String statusRequest="";
+        String resultCompile="";
+        String resultError ="";
+        long compileStartTime ;
+        long compileEndTime;
+        String compileTime="";
+        long runStartTime ;
+        long runEndTime;
+        String runTime="";
+        String compileError ="";
+        String outputCompile ="";
+
+        double score = 0;
+        double avgScore = 0;
+        double totalScore = 0;
+        String testCaseResultStatus = "";
+
+        String resultRunCompile="";
+        String resultGrade="";
+
+
+        boolean requestSuccess=false;
+
+
+        //String isSubmit = request.getParameter("hiddenSubmit");
+        //boolean isRegister = (isSubmit!=null) && (isSubmit.equals("RegisterCourseAssignment"));
+        boolean isValid = true;
+
+
+        // PARAMETER FOR COMPILER LATER TO SCORE
+        String assignmentInputType = "";
+        String assignmentInput ="";
+        String assignmentOutput = "";
+        String assignmentSampleInput = "1 2 3";
+        String assignmentSampleOutput = "";
+        String outputText ="";
+
+        //需赋值
+        String assignmentId = "";
+
+
         if(language.equals("Java")){
             String baseName =  fileName.substring(0, fileName.lastIndexOf("."));
             this.binFile =new File(srcDir+"/"+ baseName+".class");
@@ -123,7 +163,8 @@ public class SourceCompiler {
                 ProcessBuilder pb;
                 Process pc;
 
-                binFile=new File(sourceDir+File.separator+fileName.substring(0, fileName.lastIndexOf("."))+"_gen.exe");
+                //生成.exe文件
+                binFile = new File(sourceDir + File.separator + fileName.substring(0, fileName.lastIndexOf(".")) + "_gen.exe");
                 if(binFile.exists()){
                     binFile.delete();
                 }
@@ -133,9 +174,14 @@ public class SourceCompiler {
                         "-o",
                         binFile.getAbsolutePath()
                 };
+
+               // System.out.println(strCompile[0]);
+
+                //编译文件
                 pb = new ProcessBuilder(strCompile);
                 pc = pb.start();
                 pc.waitFor();
+
                 String[] cShell  =  {binFile.getAbsolutePath()};
                 String[] strShell;
                 strShell = cShell;
@@ -150,7 +196,7 @@ public class SourceCompiler {
                     System.out.println(e);
 
                 } finally {
-                    response.flushBuffer();
+                    //response.flushBuffer();
                 }
                 String compileFileCommand = "gcc " + sourceDir + File.separator + fileName+" -o "+binFile.getAbsolutePath() ;
 
@@ -168,6 +214,7 @@ public class SourceCompiler {
                     compileTime = (System.currentTimeMillis()-compileStartTime)/1000+" second - (Time Limit Exceeded)";
 
                 }
+               // System.out.println(compileTime);
                 BufferedReader brCompileError = new BufferedReader(new InputStreamReader(processCompile.getErrorStream()));
                 String errorCompile = brCompileError.readLine();
                 if (errorCompile != null)
@@ -202,7 +249,7 @@ public class SourceCompiler {
                         BufferedReader brResult = null;
                         StringBuilder sb;
                         // Allocate a output writer to write the response message into the network socket
-                        PrintWriter out = response.getWriter();
+                      //  PrintWriter out = response.getWriter();
 
                         //========================================== INPUT TYPE NO (SIMPLE ASSIGNMENT w/ ASSIGNMENT EXPECTED OUTPUT FILLED) =============================================================
 
@@ -212,6 +259,7 @@ public class SourceCompiler {
                             runStartTime = System.currentTimeMillis();
                             runEndTime = compileStartTime + 5000; //Five second
 
+                            //System.out.println("Running C File");
 
                             pb = new ProcessBuilder(binFile.getAbsolutePath());
                             pb.redirectErrorStream(true);
@@ -226,26 +274,31 @@ public class SourceCompiler {
                             try {
 
                                 while ((line = brResult.readLine()) != null) {
+                                    System.out.println(line);
                                     sb.append(line+'\n');
-                                }
+                                }//System.out.println(" ====================================  " + outputRun);
                                 Thread.sleep(1000); // 1 second @Budi to delay for system to prepare the new output and read it existed bug caching before
                                 outputText = HighlighterHandler.getContent(outputPath+"_output.txt").substring(4);
                                 outputRun = outputText;
 
+
                             } catch (IOException e) {
                                 e.printStackTrace();
+                               // System.out.println(" ====================================  " + outputRun);
                             } finally {
                                 if (brResult != null || outputRun !=null) {
                                     try {
                                         if (outputRun != null)
                                         {
-                                            System.out.println("Output Run = " + outputRun);
+                                            System.out.println("==Output Run = " + outputRun + "==========");
                                             resultRunCompile=outputRun;
                                             //Simple assignment
                                             try
                                             {
-                                                if(outputRun.equals(assignmentSampleOutput) || checkOutput(outputRun,assignmentSampleOutput))
-                                                {
+                                                //System.out.println("Output Run = " + outputRun);
+                                               // if(outputRun.equals(assignmentSampleOutput) || checkOutput(outputRun,assignmentSampleOutput))
+                                                if(outputRun.equals(assignmentSampleOutput) )
+                                                {System.out.println("Output Run = " + outputRun);
                                                     totalScore = 100;
                                                     resultGrade = "Score : "+totalScore +" - Success";
                                                 }
@@ -274,6 +327,7 @@ public class SourceCompiler {
                             }
 
                         }
+                       // System.out.println(" ====================================  " + outputRun);
                         //========================================== INPUT TYPE FILE TEST CASE =============================================================
 
                         if(assignmentInputType.equals(SystemConstant.ASSIGNMENT_INPUT_TYPE_.concat(SystemConstant.ASSIGNMENT_INPUT_TYPE_FILE)))
@@ -282,7 +336,7 @@ public class SourceCompiler {
                             // to handle the fopen stream
                         }
                         //========================================== INPUT TYPE KEYBOARD =============================================================
-                        if(assignmentInputType.equals(SystemConstant.ASSIGNMENT_INPUT_TYPE_.concat(SystemConstant.ASSIGNMENT_INPUT_TYPE_KEYBOARD)))
+                        //if(assignmentInputType.equals(SystemConstant.ASSIGNMENT_INPUT_TYPE_.concat(SystemConstant.ASSIGNMENT_INPUT_TYPE_KEYBOARD)))
                         {
                             //TODO @Budi
                             //Testing input from database data
@@ -295,6 +349,9 @@ public class SourceCompiler {
                                 int inputTest=0;
                                 String delimiter = " ";
                                 String input[] = assignmentSampleInput.split(delimiter);
+
+                                //String input[] = {"1","2","3"};
+
                                 String output[] = assignmentSampleOutput.split(delimiter);
                                 int length = input.length;
                                 inputTest=input.length;
@@ -360,7 +417,7 @@ public class SourceCompiler {
                                                 //Simple assignment
                                                 try
                                                 {
-
+                                                    System.out.println("Output Run = " + outputRun);
                                                     if(outputRun.equals(assignmentSampleOutput) || checkOutput(outputRun,assignmentSampleOutput))
                                                     {
 
@@ -570,10 +627,7 @@ public class SourceCompiler {
                             }
 
                         }
-                        else
-                        {
-
-                        }
+                       
 
 
 
@@ -619,62 +673,94 @@ public class SourceCompiler {
         if(binFile.exists()){
             binFile.delete();
         }
-        
-        this.dbl= listener;
+
         this.answerID = anID;
         this.out = pw;
         
         this.pb = null;
-        this.pc = null;
     }
     
-    public void compile(){
-        dbl.updateStatus(answerID, "Compiling");
-        
-        try{
-            if(language.equals("Java")){
-                compileJava();
-            }
-            else{
-                compileCpp();
-            }
-        }catch(IOException ex){
-            ex.printStackTrace(out);
-        }
-        catch(InterruptedException ex){
-            out.println("Interrupted Exception: Compiling Process interrupted...");
-            ex.printStackTrace(out);
-        }
-        
-    }
-    
-    private void compileJava() throws IOException, InterruptedException{
-        String strCompile[] = {"javac",
-                                "-d",
-                                srcDir,
-                                srcFilePath};
-        
-        pb = new ProcessBuilder(strCompile);
-        
-        pc = pb.start();
-        pc.waitFor();
-    }
-    
-    private void compileCpp()throws IOException, InterruptedException{
-        
-        String strCompile[] ={"g++",
-                               srcFilePath,
-                               "-o",
-                               binFile.getAbsolutePath()
-        };
-        
-        pb = new ProcessBuilder(strCompile);
-        pc = pb.start();
-        pc.waitFor();
-        
-    }
+
     
     public File getBinFile(){
         return this.binFile;
+    }
+
+    private boolean checkOutput(String actualOutput, String testcaseOutput){
+        System.out.println("Output Run = checkout" );
+        String[] testTokens = testcaseOutput.split("\\s");
+        boolean allNumeric=true;
+        for(String token:testTokens){
+            allNumeric= allNumeric && isNumeric(token);
+        }
+
+        boolean result =true;
+        if(allNumeric){
+            String[] actualTokens = actualOutput.split("\\s");
+            for(int i=0; i<testTokens.length; i++){
+                result = result && checkNumber(actualTokens[i], testTokens[i]);
+            }
+            return result;
+
+        }
+        else{
+            // check by line
+            String[] actualLines=rtrim(actualOutput).split("\r\n|\r|\n");
+            String[] testLines = rtrim(testcaseOutput).split("\r\n|\r|\n");
+
+            if(actualLines.length!= testLines.length){
+                return false;
+            }
+            for(int i=0; i< testLines.length; i++){
+                result = result && checkLine(actualLines[i], testLines[i]);
+            }
+            return result;
+        }
+
+    }
+    private boolean checkNumber(String actual, String test){
+        double actualNum = Double.parseDouble(actual);
+        double testNum = Double.parseDouble(test);
+        if(actualNum== testNum){
+            return true;
+        }
+        else return false;
+    }
+
+    private boolean checkLine(String actual, String test){
+        if(isNumeric(test)){
+            return checkNumber(actual, test);
+        }
+        else{
+            if(rtrim(actual).equals(rtrim(test))){
+                return true;
+            }
+            else return false;
+        }
+    }
+
+
+    public static boolean isNumeric(String str){
+        try {
+            double d = Double.parseDouble(str);
+        }
+        catch(NumberFormatException nfe){
+            return false;
+        }
+        return true;
+    }
+
+    public static String rtrim(String str){
+        if(str==null)
+            return null;
+
+        int index = str.length();
+        while (index > 0 && Character.isWhitespace(str.charAt(index-1)))
+            index--;
+
+        // at here charAt(index) is not whitespace
+        // index == 0 means the entire string is white space; substring will return the empty string
+        str = str.substring(0, index);
+        return str;
     }
 }

@@ -66,7 +66,7 @@ public class GenProg extends CppASTTree{
        // System.out.println(B.getTranslationUnit().getRawSignature());
     }
 
-    public static void main(String[] args) throws CoreException, IOException {
+    public static void main(String[] args) throws CoreException, IOException, InterruptedException {
         CppASTTree cppASTTree = new CppASTTree();
 
         int sizeOfA = cppASTTree.notSameNodeA.size();
@@ -83,13 +83,13 @@ public class GenProg extends CppASTTree{
         }
 
         //形成变异体
-        replace(cppASTTree.notSameNodeA.get(0),cppASTTree.notSameNodeB.get(0));
+//        replace(cppASTTree.notSameNodeA.get(0),cppASTTree.notSameNodeB.get(0));
 
         //编译程序exception.c
         String testResult = sourceFile  + "testResult" + File.separator + "result.txt";
         PrintWriter pw = new PrintWriter(new FileWriter(new File(testResult)),true);
-//        SourceCompiler srcCompiler = new SourceCompiler(sourceFile + "testResult"  , "exception.c", "c", 1, pw);
-//        srcCompiler.compile();
+        SourceCompiler srcCompiler = new SourceCompiler(sourceFile + "testResult"  , "exception.c", "c", 1, pw);
+        //srcCompiler.compile();
 
         //程序输入和输出
         String inputString[]= new String[10];

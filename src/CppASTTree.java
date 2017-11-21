@@ -205,7 +205,7 @@ public class CppASTTree {
 
 
 
-    public static void main(String[] args) throws CoreException, IOException {
+    public static void main(String[] args) throws CoreException, IOException, InterruptedException {
         new CppASTTree();
     }
 }
