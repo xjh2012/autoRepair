@@ -88,12 +88,19 @@ public class GenProg extends CppASTTree{
         //编译程序exception.c
         String testResult = sourceFile  + "testResult" + File.separator + "result.txt";
         PrintWriter pw = new PrintWriter(new FileWriter(new File(testResult)),true);
-        SourceCompiler srcCompiler = new SourceCompiler(sourceFile + "testResult"  , "exception.c", "c", 1, pw);
-        //srcCompiler.compile();
 
+        //输入文件流，解析每行，for循环每行测试用例，
         //程序输入和输出
         String inputString[]= new String[10];
         String outputString[]= new String[10];
+        String inputTestCase = "1 2 3";
+        String outputException = "6";
+        SourceCompiler srcCompiler = new SourceCompiler(sourceFile + "testResult"  , "exception.c", "c", 1, pw, inputTestCase, outputException);
+
+        System.out.println("successful test cases : " + srcCompiler.getSuccessfulFlag());
+        //srcCompiler.compile();
+
+
 
 
 

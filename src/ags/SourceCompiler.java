@@ -58,6 +58,8 @@ public class SourceCompiler {
     private CourseService css;
     private FileService fs;
 
+    private boolean SuccessfulFlag = false;
+
     public void setBeanFactory(BeanFactory arg0) throws BeansException {
 
         cs = (ConstantService)arg0.getBean("constantService");
@@ -69,7 +71,7 @@ public class SourceCompiler {
         fs = (FileService)arg0.getBean("fileService");
     }
     //文件路径、文件名、语言、id、输出流
-    public SourceCompiler(String sourceDir, String fileName, String lang, int anID, PrintWriter pw) throws IOException, InterruptedException {
+    public SourceCompiler(String sourceDir, String fileName, String lang, int anID, PrintWriter pw, String inputTestCase ,String outputException) throws IOException, InterruptedException {
         language = lang;
         srcDir = sourceDir;
         srcFilePath = srcDir+"/"+ fileName;
@@ -107,8 +109,8 @@ public class SourceCompiler {
         String assignmentInputType = "";
         String assignmentInput ="";
         String assignmentOutput = "";
-        String assignmentSampleInput = "1 2 3\n1 5 6";
-        String assignmentSampleOutput = "";
+        String assignmentSampleInput = inputTestCase;
+        String assignmentSampleOutput = outputException;
         String outputText ="";
 
         //需赋值
@@ -218,88 +220,7 @@ public class SourceCompiler {
                         //========================================== INPUT TYPE NO (SIMPLE ASSIGNMENT w/ ASSIGNMENT EXPECTED OUTPUT FILLED) =============================================================
 
                         //assignmentInputType == "ASSIGNMENT_INPUT_TYPE_NO"
-                        if(assignmentInputType.equals(SystemConstant.ASSIGNMENT_INPUT_TYPE_.concat(SystemConstant.ASSIGNMENT_INPUT_TYPE_NO)))
-                        {
-                            //TODO @Budi no input file or test case
-                            runStartTime = System.currentTimeMillis();
-                            runEndTime = compileStartTime + 5000; //Five second
 
-                            //System.out.println("Running C File");
-
-                            pb = new ProcessBuilder(binFile.getAbsolutePath());
-                            pb.redirectErrorStream(true);
-                            String outputPath = binFile.getAbsolutePath().substring(0, binFile.getAbsolutePath().lastIndexOf("."));
-                            pb.redirectOutput(new File(outputPath+"_output.txt"));
-
-                            pc = pb.start();
-                            sb = new StringBuilder();
-                            brResult = new BufferedReader(new InputStreamReader(pc.getInputStream()));
-
-                            String line="";
-                            try {
-
-                                while ((line = brResult.readLine()) != null) {
-                                    System.out.println(line);
-                                    sb.append(line+'\n');
-                                }//System.out.println(" ====================================  " + outputRun);
-                                Thread.sleep(1000); // 1 second @Budi to delay for system to prepare the new output and read it existed bug caching before
-                                outputText = HighlighterHandler.getContent(outputPath+"_output.txt").substring(4);
-                                outputRun = outputText;
-
-
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                               // System.out.println(" ====================================  " + outputRun);
-                            } finally {
-                                if (brResult != null || outputRun !=null) {
-                                    try {
-                                        if (outputRun != null)
-                                        {
-                                            System.out.println("==Output Run = " + outputRun + "==========");
-                                            resultRunCompile=outputRun;
-                                            //Simple assignment
-                                            try
-                                            {
-                                                //System.out.println("Output Run = " + outputRun);
-                                               // if(outputRun.equals(assignmentSampleOutput) || checkOutput(outputRun,assignmentSampleOutput))
-                                                if(outputRun.equals(assignmentSampleOutput) )
-                                                {System.out.println("Output Run = " + outputRun);
-                                                    totalScore = 100;
-                                                    resultGrade = "Score : "+totalScore +" - Success";
-                                                }
-                                                else
-                                                {
-                                                    totalScore = 0;
-                                                    resultRunCompile = "Incorrect result\n\n";
-                                                    resultGrade = "Score : "+totalScore +" - Fail";
-                                                }
-
-                                            }
-                                            catch (Exception e)
-                                            {
-                                                System.out.println("Exception ");
-                                                System.out.println(e.getMessage());
-                                            }
-
-
-                                        }
-                                        brResult.close();
-                                        //processRun.destroy();
-                                    } catch (IOException e) {
-                                        e.printStackTrace();
-                                    }
-                                }
-                            }
-
-                        }
-                       // System.out.println(" ====================================  " + outputRun);
-                        //========================================== INPUT TYPE FILE TEST CASE =============================================================
-                        //assignmentInputType == ASSIGNMENT_INPUT_TYPE_FILE
-                        if(assignmentInputType.equals(SystemConstant.ASSIGNMENT_INPUT_TYPE_.concat(SystemConstant.ASSIGNMENT_INPUT_TYPE_FILE)))
-                        {
-                            //TODO @Budi
-                            // to handle the fopen stream
-                        }
                         //========================================== INPUT TYPE KEYBOARD =============================================================
                         //assignmentInputType == ASSIGNMENT_INPUT_TYPE_KEYBOARD
                         //if(assignmentInputType.equals(SystemConstant.ASSIGNMENT_INPUT_TYPE_.concat(SystemConstant.ASSIGNMENT_INPUT_TYPE_KEYBOARD)))
@@ -366,9 +287,11 @@ public class SourceCompiler {
                                     }
                                     pc.waitFor();
 
+                                    //从文件中读取结果
                                     outputText = HighlighterHandler.getContent(outputPath+"_output.txt").substring(4);
                                     outputRun = outputText;
                                     System.out.println("outputcase : " + outputRun);
+
                                 }
                                 catch(IOException ex){
 
@@ -381,27 +304,32 @@ public class SourceCompiler {
                                     if(ps!=null ){
                                         ps.close();
                                     }
-                                    if(brResult!=null){
+                                    if(brResult != null){
+
                                         try{
                                             if (outputRun != null)
                                             {
                                                 System.out.println("Output Run = " + outputRun);
-                                                resultRunCompile=outputRun;
+                                                resultRunCompile = outputRun;
                                                 //Simple assignment
                                                 try
                                                 {
                                                     System.out.println("Output Run = " + outputRun);
+                                                    //预期结果，assignmentSampleOutput
                                                     if(outputRun.equals(assignmentSampleOutput) || checkOutput(outputRun,assignmentSampleOutput))
                                                     {
 
                                                         totalScore = 100;
                                                         resultGrade = "Score : "+totalScore +" - Success";
+                                                        System.out.println(resultGrade);
+                                                        this.SuccessfulFlag = true;
                                                     }
                                                     else
                                                     {
                                                         totalScore = 0;
                                                         resultRunCompile = "Incorrect result\n\n";
                                                         resultGrade = "Score : "+totalScore +" - Fail";
+                                                        System.out.println(resultGrade);
                                                     }
 
                                                 }
@@ -419,186 +347,7 @@ public class SourceCompiler {
                                     }
                                 }
                             }
-                            else
-                            {
-                                //System.out.println("many test cases : : :");
-                                //Testing input from testcase
-                                //GET DATA INPUT AND EXPECTED FROM FILE ASSIGNMENT
-                                int numTestCase=1; // default for DB only
-                                int inputTest=0;
-                                String delimiter = "\\W+";//具有读写属性，写的时候如果文件存在，会被清空，从头开始写。
 
-                                List<ListFileAssignmentView> testCaseList = new ArrayList<ListFileAssignmentView>();
-
-                                ListFileAssignmentView searchTestCase = new ListFileAssignmentView();
-                                searchTestCase.setAssignmentId(Integer.parseInt(assignmentId));
-                                searchTestCase.setFileAssignmentType(SystemConstant.FILE_ASSIGNMENT_.concat(SystemConstant.FILE_ASSIGNMENT_NAME_TEST_CASE));
-                                searchTestCase.setIsDelete(SystemConstant.FALSE.toString());//0
-
-                                testCaseList = fs.getListFileAssigmentByParam(searchTestCase);
-
-
-                                System.out.println("Start Executing...<br>");
-
-                                PrintStream ps=null;
-                                OutputStream os = null;
-                                StringBuilder sbOut=null;
-                                String[] runOutputs;
-                                BufferedReader bfr=null;
-                                runOutputs=new String[inputTest];
-
-                                try{
-                                    // PASSING INPUT SIMULATED KEYBOARD INTO PROGRAM
-                                    String outputPath ="";
-                                    for(int i = 0; i < testCaseList.size(); i ++)
-                                    {
-                                        //TODO @Budi with input file based on test case
-                                        runStartTime = System.currentTimeMillis();
-                                        runEndTime = compileStartTime + 5000; //Five second
-
-
-                                        pb = new ProcessBuilder(binFile.getAbsolutePath());
-                                        pb.redirectErrorStream(true);
-                                        outputPath = testCaseList.get(i).getParFileFullPath().substring(0, testCaseList.get(i).getParFileFullPath().lastIndexOf("_"));
-                                        pb.redirectOutput(new File(outputPath+"_output.txt"));
-
-                                        pc = pb.start();
-                                        ps = new PrintStream(new BufferedOutputStream(pc.getOutputStream()));
-                                        os = (new BufferedOutputStream(pc.getOutputStream()));
-                                        String inputTestCaseFiles = HighlighterHandler.getContent(testCaseList.get(i).getParFileFullPath()).substring(4);
-                                        String input[] = inputTestCaseFiles.split(delimiter);
-                                        String rawOutput = testCaseList.get(i).getFileAssignmentExpectedOutput();
-                                        String output[]=null;
-
-                                        if(rawOutput!=null && !rawOutput.equals(""))
-                                        {
-                                            output = rawOutput.split(delimiter);
-                                        }
-                                        else
-                                        {
-                                            //TODO @Budi generate output from sample source
-                                            try
-                                            {
-                                                outputText = HighlighterHandler.getContent(outputPath+"_output.txt").substring(4);
-
-                                            }catch(Exception e)
-                                            {
-                                                System.out.println(e);
-                                            }
-
-                                            ;
-                                        }
-
-                                        int length = input.length;
-                                        inputTest=input.length;
-                                        for(int j=0; j<inputTest; j++){
-                                            String inputKeyboard = input[j];
-                                            ps.print(inputKeyboard);
-                                            ps.print("\n");
-                                            brResult = new BufferedReader(new InputStreamReader(pc.getInputStream()));
-                                        }
-                                        brResult = new BufferedReader(new InputStreamReader(pc.getInputStream()));
-
-                                        ps.close();
-
-                                        sbOut = new StringBuilder();
-                                        int ch;
-                                        bfr = new BufferedReader(new InputStreamReader(pc.getInputStream()));
-                                        while((ch=bfr.read())!= -1){
-                                            sbOut.append((char)ch);
-                                        }
-                                        pc.waitFor();
-
-                                        outputText = HighlighterHandler.getContent(outputPath+"_output.txt").substring(4);
-                                        outputRun = outputText;
-                                        //TODO @Budi 23102017
-                                        //because it is the admin or authorized so update the assignment  sample output expected in db
-                                        //as it will be compiled by the correct sample source
-                                        //This purpose to generate expected output automatically by correct sample source
-                                        //Init the value
-
-
-                                        assignmentSampleOutput = testCaseList.get(i).getFileAssignmentExpectedOutput();
-
-
-                                        if(assignmentSampleOutput==null || assignmentSampleOutput.equals(""))
-                                        {
-                                            //update
-
-                                            FileAssignmentView fileAssignment = new FileAssignmentView();
-                                            fileAssignment.setAssignmentId(Integer.parseInt(assignmentId));
-                                            fileAssignment.setId((testCaseList.get(i).getFileAssignmentId()));
-                                            fileAssignment.setExpectedOutput(outputText);
-                                            fileAssignment.setCreatedBy(001);//Compile System
-                                            fs.updateFileAssignment(fileAssignment);
-
-
-                                            assignmentSampleOutput = outputText;
-
-                                        }
-
-                                        if(brResult!=null){
-
-                                            try{
-                                                if (outputRun != null)
-                                                {
-                                                    System.out.println("Output Run = " + outputRun);
-                                                    resultRunCompile=outputRun;
-                                                    //Simple assignment
-                                                    try
-                                                    {
-
-                                                        if(outputRun.equals(assignmentSampleOutput) || checkOutput(outputRun,assignmentSampleOutput))
-                                                        {
-                                                            score = 100;
-                                                            totalScore += score;
-                                                            testCaseResultStatus = "Testcase"+(i+1)+" - Success ("+ score+")\n".concat(testCaseResultStatus);
-                                                            resultGrade = "Score : " + totalScore/(i+1);
-                                                            System.out.println("Result : \n"+testCaseResultStatus);
-                                                        }
-                                                        else
-                                                        {
-                                                            resultRunCompile = "Incorrect result\n\n";
-                                                            score = 0;
-                                                            totalScore += score;
-                                                            testCaseResultStatus = "Testcase"+(i+1)+" - Fail ("+ score+")\n".concat(testCaseResultStatus);
-                                                            resultGrade = "Score : "+ totalScore/(i+1);
-                                                            System.out.println("Result : \n" +testCaseResultStatus);
-
-                                                        }
-
-                                                    }
-                                                    catch (Exception e)
-                                                    {
-                                                        System.out.println("Exception ");
-                                                        System.out.println(e.getMessage());
-                                                    }
-
-
-                                                }
-                                                outputRun = brResult.readLine();
-                                                brResult.close();
-                                            }catch(IOException e){}
-                                        }
-
-                                    }
-
-                                }
-                                catch(IOException ex){
-
-                                }
-                                catch(InterruptedException ex){
-                                    ex.printStackTrace();
-                                }
-                                finally{
-
-                                    if(ps!=null ){
-                                        ps.close();
-                                    }
-
-                                }
-
-                            }
 
                         }
 
@@ -636,9 +385,10 @@ public class SourceCompiler {
 
             }
         }
-        if(binFile.exists()){
-            binFile.delete();
-        }
+
+//        if(binFile.exists()){
+//            binFile.delete();
+//        }
 
         this.answerID = anID;
         this.out = pw;
@@ -650,6 +400,10 @@ public class SourceCompiler {
     
     public File getBinFile(){
         return this.binFile;
+    }
+
+    public boolean getSuccessfulFlag() {
+        return this.SuccessfulFlag;
     }
 
     private boolean checkOutput(String actualOutput, String testcaseOutput){
