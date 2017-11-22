@@ -3,26 +3,18 @@
  */
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
 
 /*
  * 25092017 work file uploading
  */
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.io.PrintWriter;
-import java.nio.charset.Charset;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,23 +23,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.apache.commons.io.Charsets;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
 
-import ags.AnswerJudge;
-import ags.DBSGradingJudge;
 import common.SystemConstant;
 import model.AssignmentView;
 import model.FileAssignmentView;
-import model.FileView;
 import model.ListFileAssignmentView;
-import model.ParameterView;
 import service.ConstantService;
 import service.CourseService;
 import service.FileService;
@@ -56,7 +41,6 @@ import service.ParameterService;
 import service.SystemService;
 import service.UserService;
 import util.HighlighterHandler;
-import com.octo.captcha.engine.image.ListImageCaptchaEngine;
 
 public class AjaxAPIFileCompileByParamController extends BaseController implements Controller, BeanFactoryAware {
 

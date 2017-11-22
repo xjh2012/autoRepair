@@ -4,59 +4,27 @@ package ags;
 import common.SystemConstant;
 import model.FileAssignmentView;
 import model.ListFileAssignmentView;
-import org.springframework.web.servlet.ModelAndView;
 import util.HighlighterHandler;
 
-import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
 
 /*
  * 25092017 work file uploading
  */
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.io.PrintWriter;
-import java.nio.charset.Charset;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import org.apache.commons.io.Charsets;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller;
 
-import ags.AnswerJudge;
-import ags.DBSGradingJudge;
-import common.SystemConstant;
-import model.AssignmentView;
-import model.FileAssignmentView;
-import model.FileView;
-import model.ListFileAssignmentView;
-import model.ParameterView;
 import service.ConstantService;
 import service.CourseService;
 import service.FileService;
@@ -64,8 +32,6 @@ import service.LogService;
 import service.ParameterService;
 import service.SystemService;
 import service.UserService;
-import util.HighlighterHandler;
-import com.octo.captcha.engine.image.ListImageCaptchaEngine;
 
 /**
  *
@@ -76,11 +42,11 @@ public class SourceCompiler {
     private String language;
     private String srcDir;
     private String srcFilePath;
-    
+
     private File binFile;
-    
+
     private ProcessBuilder pb;
-    
+
     private int answerID;
     private DbListener dbl;
     private PrintWriter out;
@@ -92,7 +58,6 @@ public class SourceCompiler {
     private CourseService css;
     private FileService fs;
 
-
     public void setBeanFactory(BeanFactory arg0) throws BeansException {
 
         cs = (ConstantService)arg0.getBean("constantService");
@@ -103,7 +68,6 @@ public class SourceCompiler {
         css = (CourseService)arg0.getBean("courseService");
         fs = (FileService)arg0.getBean("fileService");
     }
-
     //文件路径、文件名、语言、id、输出流
     public SourceCompiler(String sourceDir, String fileName, String lang, int anID, PrintWriter pw) throws IOException, InterruptedException {
         language = lang;
@@ -143,7 +107,7 @@ public class SourceCompiler {
         String assignmentInputType = "";
         String assignmentInput ="";
         String assignmentOutput = "";
-        String assignmentSampleInput = "1 2 3";
+        String assignmentSampleInput = "1 2 3\n1 5 6";
         String assignmentSampleOutput = "";
         String outputText ="";
 
@@ -175,7 +139,7 @@ public class SourceCompiler {
                         binFile.getAbsolutePath()
                 };
 
-               // System.out.println(strCompile[0]);
+                // System.out.println(strCompile[0]);
 
                 //编译文件
                 pb = new ProcessBuilder(strCompile);
@@ -253,6 +217,7 @@ public class SourceCompiler {
 
                         //========================================== INPUT TYPE NO (SIMPLE ASSIGNMENT w/ ASSIGNMENT EXPECTED OUTPUT FILLED) =============================================================
 
+                        //assignmentInputType == "ASSIGNMENT_INPUT_TYPE_NO"
                         if(assignmentInputType.equals(SystemConstant.ASSIGNMENT_INPUT_TYPE_.concat(SystemConstant.ASSIGNMENT_INPUT_TYPE_NO)))
                         {
                             //TODO @Budi no input file or test case
@@ -329,56 +294,63 @@ public class SourceCompiler {
                         }
                        // System.out.println(" ====================================  " + outputRun);
                         //========================================== INPUT TYPE FILE TEST CASE =============================================================
-
+                        //assignmentInputType == ASSIGNMENT_INPUT_TYPE_FILE
                         if(assignmentInputType.equals(SystemConstant.ASSIGNMENT_INPUT_TYPE_.concat(SystemConstant.ASSIGNMENT_INPUT_TYPE_FILE)))
                         {
                             //TODO @Budi
                             // to handle the fopen stream
                         }
                         //========================================== INPUT TYPE KEYBOARD =============================================================
+                        //assignmentInputType == ASSIGNMENT_INPUT_TYPE_KEYBOARD
                         //if(assignmentInputType.equals(SystemConstant.ASSIGNMENT_INPUT_TYPE_.concat(SystemConstant.ASSIGNMENT_INPUT_TYPE_KEYBOARD)))
                         {
                             //TODO @Budi
                             //Testing input from database data
 
-
+                            //输入不为空，测试用例
                             if(assignmentSampleInput!=null &&  !assignmentSampleInput.equals(""))
                             {
                                 //GET DATA INPUT AND EXPECTED FROM ASSIGNMENT
                                 int numTestCase=1; // default for DB only
                                 int inputTest=0;
                                 String delimiter = " ";
-                                String input[] = assignmentSampleInput.split(delimiter);
+                                String input[] = assignmentSampleInput.split(delimiter);//测试用例
 
                                 //String input[] = {"1","2","3"};
 
                                 String output[] = assignmentSampleOutput.split(delimiter);
                                 int length = input.length;
-                                inputTest=input.length;
 
+                                inputTest=input.length;
 
                                 System.out.println("Start Executing...<br>");
 
-                                PrintStream ps=null;
+                                PrintStream ps = null;
                                 OutputStream os = null;
-                                StringBuilder sbOut=null;
+                                StringBuilder sbOut = null;
                                 String[] runOutputs;
-                                BufferedReader bfr=null;
-                                runOutputs=new String[inputTest];
+                                BufferedReader bfr = null;
+                                runOutputs = new String[inputTest];
+
                                 try{
+                                    //build .exe文件
                                     pb = new ProcessBuilder(binFile.getAbsolutePath());
                                     pb.redirectErrorStream(true);
+
+                                    //输出到文件中.txt
                                     String outputPath = binFile.getAbsolutePath().substring(0, binFile.getAbsolutePath().lastIndexOf("."));
                                     pb.redirectOutput(new File(outputPath+"_output.txt"));
 
                                     pc = pb.start();
                                     ps = new PrintStream(new BufferedOutputStream(pc.getOutputStream()));
                                     os = (new BufferedOutputStream(pc.getOutputStream()));
-                                    // PASSING INPUT SIMULATED KEYBOARD INTO PROGRAM
-                                    for(int i=0; i<inputTest; i++){
+
+                                    // PASSING INPUT SIMULATED KEYBOARD INTO PROGRAM  测试用例
+                                    for(int i = 0; i < inputTest; i ++){
                                         String inputKeyboard = input[i];
                                         ps.print(inputKeyboard);
                                         ps.print("\n");
+                                        //System.out.println("inputcase : " + inputKeyboard);
                                         brResult = new BufferedReader(new InputStreamReader(pc.getInputStream()));
 
                                     }
@@ -396,6 +368,7 @@ public class SourceCompiler {
 
                                     outputText = HighlighterHandler.getContent(outputPath+"_output.txt").substring(4);
                                     outputRun = outputText;
+                                    System.out.println("outputcase : " + outputRun);
                                 }
                                 catch(IOException ex){
 
@@ -448,17 +421,19 @@ public class SourceCompiler {
                             }
                             else
                             {
+                                //System.out.println("many test cases : : :");
                                 //Testing input from testcase
                                 //GET DATA INPUT AND EXPECTED FROM FILE ASSIGNMENT
                                 int numTestCase=1; // default for DB only
                                 int inputTest=0;
-                                String delimiter = "\\W+";
+                                String delimiter = "\\W+";//具有读写属性，写的时候如果文件存在，会被清空，从头开始写。
 
                                 List<ListFileAssignmentView> testCaseList = new ArrayList<ListFileAssignmentView>();
+
                                 ListFileAssignmentView searchTestCase = new ListFileAssignmentView();
                                 searchTestCase.setAssignmentId(Integer.parseInt(assignmentId));
                                 searchTestCase.setFileAssignmentType(SystemConstant.FILE_ASSIGNMENT_.concat(SystemConstant.FILE_ASSIGNMENT_NAME_TEST_CASE));
-                                searchTestCase.setIsDelete(SystemConstant.FALSE.toString());
+                                searchTestCase.setIsDelete(SystemConstant.FALSE.toString());//0
 
                                 testCaseList = fs.getListFileAssigmentByParam(searchTestCase);
 
@@ -471,16 +446,17 @@ public class SourceCompiler {
                                 String[] runOutputs;
                                 BufferedReader bfr=null;
                                 runOutputs=new String[inputTest];
+
                                 try{
-
-
                                     // PASSING INPUT SIMULATED KEYBOARD INTO PROGRAM
                                     String outputPath ="";
-                                    for(int i=0; i<testCaseList.size();i++)
+                                    for(int i = 0; i < testCaseList.size(); i ++)
                                     {
                                         //TODO @Budi with input file based on test case
                                         runStartTime = System.currentTimeMillis();
                                         runEndTime = compileStartTime + 5000; //Five second
+
+
                                         pb = new ProcessBuilder(binFile.getAbsolutePath());
                                         pb.redirectErrorStream(true);
                                         outputPath = testCaseList.get(i).getParFileFullPath().substring(0, testCaseList.get(i).getParFileFullPath().lastIndexOf("_"));
@@ -493,6 +469,7 @@ public class SourceCompiler {
                                         String input[] = inputTestCaseFiles.split(delimiter);
                                         String rawOutput = testCaseList.get(i).getFileAssignmentExpectedOutput();
                                         String output[]=null;
+
                                         if(rawOutput!=null && !rawOutput.equals(""))
                                         {
                                             output = rawOutput.split(delimiter);
@@ -606,9 +583,6 @@ public class SourceCompiler {
 
                                     }
 
-
-
-
                                 }
                                 catch(IOException ex){
 
@@ -627,10 +601,6 @@ public class SourceCompiler {
                             }
 
                         }
-                       
-
-
-
 
 
                     } catch (Exception e)
@@ -662,10 +632,6 @@ public class SourceCompiler {
                         compileError = compileError+outputCompile;
                     }
                 }
-
-
-
-
 
 
             }
