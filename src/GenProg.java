@@ -6,11 +6,8 @@ import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.ltk.core.refactoring.Change;
 import org.eclipse.text.edits.TextEditGroup;
 
-import java.io.File;
-import java.io.FileWriter;
+import java.io.*;
 import java.io.IOException;
-import java.io.PrintWriter;
-
 import static org.eclipse.cdt.core.dom.rewrite.ASTRewrite.CommentPosition.freestanding;
 import static org.eclipse.cdt.core.dom.rewrite.ASTRewrite.CommentPosition.leading;
 import static org.eclipse.cdt.core.dom.rewrite.ASTRewrite.CommentPosition.trailing;
@@ -18,8 +15,9 @@ import static org.eclipse.cdt.core.dom.rewrite.ASTRewrite.CommentPosition.traili
 /**
  * Created by xjh on 2017/10/30.
  */
-public class GenProg extends CppASTTree{
+public class GenProg {
 
+    //E:\autoRepair\
     private static String sourceFile = System.getProperty("user.dir") + File.separator;
 
 
@@ -67,11 +65,19 @@ public class GenProg extends CppASTTree{
     }
 
     public static void main(String[] args) throws CoreException, IOException, InterruptedException {
-        CppASTTree cppASTTree = new CppASTTree();
+
+        //模板程序
+        String modelSourceFile = System.getProperty("user.dir") + File.separator + "modelProgram" + File.separator + "exception.c";
+        CppASTTree cppASTTree = new CppASTTree(modelSourceFile);
+
+
+        String sourceFile = System.getProperty("user.dir") + File.separator+ File.separator + "testFiles" + File.separator + "exception1.c";
+
 
         int sizeOfA = cppASTTree.notSameNodeA.size();
         int sizeOfB = cppASTTree.notSameNodeB.size();
 
+        //生成第一代变异体
         for(int i = 0; i < sizeOfA; i ++){
             //System.out.println(cppASTTree.notSameNodeA.get(i).getRawSignature());
 
@@ -89,21 +95,101 @@ public class GenProg extends CppASTTree{
         String testResult = sourceFile  + "testResult" + File.separator + "result.txt";
         PrintWriter pw = new PrintWriter(new FileWriter(new File(testResult)),true);
 
-        //输入文件流，解析每行，for循环每行测试用例，
-        //程序输入和输出
-        String inputString[]= new String[10];
-        String outputString[]= new String[10];
-        String inputTestCase = "1 2 3";
-        String outputException = "6";
-        SourceCompiler srcCompiler = new SourceCompiler(sourceFile + "testResult"  , "exception.c", "c", 1, pw, inputTestCase, outputException);
 
-        System.out.println("successful test cases : " + srcCompiler.getSuccessfulFlag());
-        //srcCompiler.compile();
+        boolean findCorrectMutationFlag = false;
+        int cnt = 0;//迭代次数,可调节
+        //到找到正确程序为止
+        while(cnt < 2){
+            cnt++;
+            //执行文件中所有变异体的循环
+            int mutationNumber = 0;
+
+            File[] mutationFiles = new File(sourceFile + "testFiles").listFiles();
+
+            for(File file : mutationFiles){
+                mutationNumber ++;
+                //每个变异体执行所有测试用例，并比较输出结果，计算适应度
+                int passedNumber = 0;
+                int failedNumber = 0;
+                System.out.println(file.getAbsolutePath());
+
+                try {
+                    // read file content from file
+                    StringBuffer sb= new StringBuffer("");
+
+                    //读文件中的测试用例
+                    FileReader inputReader = new FileReader(sourceFile + "input" + File.separator + "threeWordPlus_input.txt");
+                    BufferedReader inputCase = new BufferedReader(inputReader);
+
+                    //读文件中的期待输出
+                    FileReader outputExceptionReader = new FileReader(sourceFile + "correctOutput" + File.separator + "compareOuput.txt");
+                    BufferedReader outputCase = new BufferedReader(outputExceptionReader);
+
+                    //输入的每行，期待输出的每行
+                    String input_str = null;
+                    String output_str = null;
+
+                    //对每一个测试用例
+                    while((input_str = inputCase.readLine()) != null) {
+                        sb.append(input_str + "/n");
+
+                        output_str = outputCase.readLine();
+                        System.out.println(input_str +  " =  " + output_str);
+
+                        SourceCompiler srcCompiler = new SourceCompiler(sourceFile  , "exception" + mutationNumber + ".c", "c", 1, pw, input_str, output_str);
+
+                        if(srcCompiler.getSuccessfulFlag()){
+                            passedNumber ++;
+                        }else{
+                            failedNumber ++;
+                        }
+
+                        System.out.println("successful test cases : " + srcCompiler.getSuccessfulFlag());
+
+                    }
+
+                    inputCase.close();
+                    inputReader.close();
+
+                    // write string to file
+//            FileWriter writer = new FileWriter("c://test2.txt");
+//            BufferedWriter bw = new BufferedWriter(writer);
+//            bw.write(sb.toString());
+//
+//            bw.close();
+//            writer.close();
+                }
+                catch(FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+                catch(IOException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("passed : " + passedNumber + "  failed : " + failedNumber);
+
+                if(failedNumber == 0){
+                    System.out.println("find the correct mutation : " + file.getAbsolutePath());
+                    findCorrectMutationFlag = true;
+                    break;
+                }
+
+                //计算适应度
+
+                //变异，交叉，生成新的变异体
+
+            }
+
+            //跳出while循环,找到正确程序
+            if(findCorrectMutationFlag){
+                break;
+            }
 
 
-
-
-
+        }
 
     }
+
+
+
 }
+

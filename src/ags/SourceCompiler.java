@@ -74,7 +74,7 @@ public class SourceCompiler {
     public SourceCompiler(String sourceDir, String fileName, String lang, int anID, PrintWriter pw, String inputTestCase ,String outputException) throws IOException, InterruptedException {
         language = lang;
         srcDir = sourceDir;
-        srcFilePath = srcDir+"/"+ fileName;
+        srcFilePath = srcDir + File.separator + "testFiles" + File.separator + fileName;
 
         String statusRequest="";
         String resultCompile="";
@@ -130,13 +130,13 @@ public class SourceCompiler {
                 Process pc;
 
                 //生成.exe文件
-                binFile = new File(sourceDir + File.separator + fileName.substring(0, fileName.lastIndexOf(".")) + "_gen.exe");
+                binFile = new File(sourceDir + File.separator + "testResult" + File.separator + fileName.substring(0, fileName.lastIndexOf(".")) + "_gen.exe");
                 if(binFile.exists()){
                     binFile.delete();
                 }
 
                 String strCompile[] ={"gcc",
-                        sourceDir + File.separator + fileName,
+                        sourceDir + File.separator + "testFiles" + File.separator + fileName,
                         "-o",
                         binFile.getAbsolutePath()
                 };
@@ -164,7 +164,7 @@ public class SourceCompiler {
                 } finally {
                     //response.flushBuffer();
                 }
-                String compileFileCommand = "gcc " + sourceDir + File.separator + fileName+" -o "+binFile.getAbsolutePath() ;
+                String compileFileCommand = "gcc " + sourceDir + File.separator + "testFiles" + File.separator + fileName+" -o "+binFile.getAbsolutePath() ;
 
                 compileStartTime = System.currentTimeMillis();
                 compileEndTime = compileStartTime + 5000; //Five second
@@ -309,7 +309,7 @@ public class SourceCompiler {
                                         try{
                                             if (outputRun != null)
                                             {
-                                                System.out.println("Output Run = " + outputRun);
+                                                //System.out.println("Output Run = " + outputRun);
                                                 resultRunCompile = outputRun;
                                                 //Simple assignment
                                                 try

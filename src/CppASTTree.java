@@ -27,25 +27,28 @@ public class CppASTTree {
     public List<IASTNode> notSameNodeA = new ArrayList<>();
     public List<IASTNode> notSameNodeB = new ArrayList<>();
 
-    public CppASTTree() {
+    int simpleNodeNumber = 0;
+
+    public CppASTTree(String modelProgram) {
         System.out.println( System.getProperty("user.dir") + File.separator + "testFiles" + File.separator);
 
         //Create the nodes.语法树根节点
-        String sourceFile = System.getProperty("user.dir") + File.separator+ File.separator + "testFiles" + File.separator + "exception.cpp";
-        String sourceFileTmp = System.getProperty("user.dir") + File.separator+ File.separator + "testFiles" + File.separator + "exception1.cpp";
 
-        IASTTranslationUnit tu = CppParser.parse(sourceFile, ParserLanguage.CPP, false);
-        IASTTranslationUnit tuTmp = CppParser.parse(sourceFileTmp, ParserLanguage.CPP, false);
+        String sourceFileTmp = System.getProperty("user.dir") + File.separator+ File.separator + "testFiles" + File.separator + "exception2.c";
 
+        IASTTranslationUnit tu = CppParser.parse(modelProgram, ParserLanguage.C, false);
+        IASTTranslationUnit tuTmp = CppParser.parse(sourceFileTmp, ParserLanguage.C, false);
+
+        System.out.println(tu.getRawSignature());
         //遍历语法树，添加所有子节点进top
-        DefaultMutableTreeNode top = new DefaultMutableTreeNode("TU");
 
         createNodes(tu, nodeNumA);
         createNodes(tuTmp, nodeNumB);
         //遍历两棵语法树,判断不同节点
-       // matchNodes(tu, tuTmp);
+        //matchNodes(tu, tuTmp);
 
-        System.out.println("simpleTreeMatching : " + simpleTreeMatching(tu, tuTmp));
+        this.simpleNodeNumber = simpleTreeMatching(tu, tuTmp);
+        System.out.println("simpleTreeMatching : " + this.simpleNodeNumber);
         //System.out.println("A Tree : ");
        printNodes(tu, notSameNodeA, nodeNumA);
        // System.out.println("B Tree : ");
@@ -73,6 +76,7 @@ public class CppASTTree {
         nodeNum.put(node, 0);
         for (IASTNode child : node.getChildren()) {
             createNodes(child , nodeNum);
+           // System.out.println( child.getClass().getSimpleName());
         }
     }
 
@@ -107,8 +111,10 @@ public class CppASTTree {
         String aTag = A.getClass().getSimpleName();
         String bTag = B.getClass().getSimpleName();
 
+       // System.out.println(aTag + "      " + bTag);
         //表达式要判断内容是否相等,表达式内容不相等则节点不匹配
         if(aTag.endsWith("Expression") && bTag.endsWith("Expression")){
+           // System.out.println("expresstion ==================================");
             if(!A.getRawSignature().equals(B.getRawSignature())){
                 return 0;
             }
@@ -144,7 +150,7 @@ public class CppASTTree {
             for(int j = 1; j < bChildNum + 1; j++) {
                 //两棵树最大公共子节点数量
                 w[i][j] = simpleTreeMatching(A.getChildren()[i - 1], B.getChildren()[j - 1]);
-
+               // System.out.println(i + "       " + j);
                 //两个节点相似度
                 HashMap<IASTNode, IASTNode> nodeDictionary = new HashMap<>();
                 nodeDictionary.put(A.getChildren()[i - 1], B.getChildren()[j - 1]);
@@ -206,6 +212,6 @@ public class CppASTTree {
 
 
     public static void main(String[] args) throws CoreException, IOException, InterruptedException {
-        new CppASTTree();
+       // new CppASTTree();
     }
 }

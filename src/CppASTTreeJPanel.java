@@ -25,8 +25,8 @@ public class CppASTTreeJPanel extends JPanel implements TreeSelectionListener {
         System.out.println( System.getProperty("user.dir") + File.separator + "testFiles" + File.separator);
         //Create the nodes.语法树根节点
         String sourceFile = //"C:\\Users\\qiujing\\Downloads\\cocos2d-x-3\\cocos2d-x-3\\cocos\\editor-support\\spine\\Slot.c";
-                System.getProperty("user.dir") + File.separator + "testFiles" + File.separator + "exception.cpp";
-        IASTTranslationUnit tu = CppParser.parse(sourceFile, ParserLanguage.CPP, false);
+                System.getProperty("user.dir") + File.separator + "testFiles" + File.separator + "exception1.c";
+        IASTTranslationUnit tu = CppParser.parse(sourceFile, ParserLanguage.C, false);
 
         //遍历语法树，添加所有子节点进top
         DefaultMutableTreeNode top = new DefaultMutableTreeNode("TU");
