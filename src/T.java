@@ -1,5 +1,7 @@
 import java.io.*;
+import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * 邱景 创建于 2017/1/24.
@@ -60,5 +62,42 @@ public class T {
         return Math.abs(random.nextInt())%scope;
     }
 
+    //双重校验锁获取一个Random单例
+    public static ThreadLocalRandom getRandom() {
+        return ThreadLocalRandom.current();
+        /*if(random==null){
+            synchronized (RandomUtils.class) {
+                if(random==null){
+                    random =new Random();
+                }
+            }
+        }
 
+        return random;*/
+    }
+
+    /**
+     * 获得一个[0,max)之间的随机整数。
+     * @param max
+     * @return
+     */
+    public static int getRandomInt(int max) {
+        return getRandom().nextInt(max);
+    }
+    /**
+     * 从map中随机取得一个key
+     * @param map
+     * @return
+     */
+    public static <K, V> K getRandomKeyFromMap(Map<K, V> map) {
+        int rn = getRandomInt(map.size());
+        int i = 0;
+        for (K key : map.keySet()) {
+            if(i==rn){
+                return key;
+            }
+            i++;
+        }
+        return null;
+    }
 }

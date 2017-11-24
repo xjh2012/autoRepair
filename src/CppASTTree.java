@@ -17,8 +17,11 @@ import java.util.List;
 public class CppASTTree {
 
     //存1，0
-    private HashMap<IASTNode,Integer> nodeNumA = new HashMap<>();
-    private HashMap<IASTNode,Integer> nodeNumB = new HashMap<>();
+    public HashMap<IASTNode,Integer> nodeNumA = new HashMap<>();
+    public HashMap<IASTNode,Integer> nodeNumB = new HashMap<>();
+
+    public HashMap<IASTNode, IASTNode> modelParentNode = new HashMap<>();//模板程序的每个节点父节点
+    public HashMap<IASTNode, IASTNode> parentNode = new HashMap<>();//变异体的每个节点父节点
 
 
     private HashMap<HashMap<IASTNode, IASTNode>, Double> nodeSimilar= new HashMap<>();
@@ -29,32 +32,14 @@ public class CppASTTree {
 
     int simpleNodeNumber = 0;
 
+    IASTTranslationUnit tu = null;
+
     public CppASTTree(String modelProgram) {
         System.out.println( System.getProperty("user.dir") + File.separator + "testFiles" + File.separator);
-
+        //模板程序语法分析
         //Create the nodes.语法树根节点
-
-        String sourceFileTmp = System.getProperty("user.dir") + File.separator+ File.separator + "testFiles" + File.separator + "exception2.c";
-
-        IASTTranslationUnit tu = CppParser.parse(modelProgram, ParserLanguage.C, false);
-        IASTTranslationUnit tuTmp = CppParser.parse(sourceFileTmp, ParserLanguage.C, false);
-
-        System.out.println(tu.getRawSignature());
-        //遍历语法树，添加所有子节点进top
-
-        createNodes(tu, nodeNumA);
-        createNodes(tuTmp, nodeNumB);
-        //遍历两棵语法树,判断不同节点
-        //matchNodes(tu, tuTmp);
-
-        this.simpleNodeNumber = simpleTreeMatching(tu, tuTmp);
-        System.out.println("simpleTreeMatching : " + this.simpleNodeNumber);
-        //System.out.println("A Tree : ");
-       printNodes(tu, notSameNodeA, nodeNumA);
-       // System.out.println("B Tree : ");
-        printNodes(tuTmp, notSameNodeB, nodeNumB);
-        //Create a tree that allows one selection at a time.
-
+        this.tu = CppParser.parse(modelProgram, ParserLanguage.C, false);
+        recordParents(tu, nodeNumA, modelParentNode);
     }
 
     private class NodeInfo {
@@ -70,13 +55,37 @@ public class CppASTTree {
     }
 
     //create childNode, traverse the tree.
-    private void createNodes(IASTNode node , HashMap<IASTNode, Integer> nodeNum) {
+    void createNodes(String sourseProgram) {
+        //System.out.println(node.getRawSignature());
+        //标号节点，按照先序遍历顺序
+        IASTTranslationUnit tuTmp = CppParser.parse(sourseProgram, ParserLanguage.C, false);
+
+       // System.out.println(tu.getRawSignature());
+        //遍历语法树，添加所有子节点进top
+        //记录父节点
+        recordParents(tuTmp, nodeNumB, parentNode);
+        //遍历两棵语法树,判断不同节点
+        //matchNodes(tu, tuTmp);
+
+        this.simpleNodeNumber = simpleTreeMatching(tu, tuTmp);
+        System.out.println("simpleTreeMatching : " + this.simpleNodeNumber);
+        //System.out.println("A Tree : ");
+        printNodes(tu, notSameNodeA, nodeNumA);
+        // System.out.println("B Tree : ");
+        printNodes(tuTmp, notSameNodeB, nodeNumB);
+
+    }
+
+
+    //create childNode, traverse the tree.
+    private void recordParents(IASTNode node , HashMap<IASTNode, Integer> nodeNum, HashMap<IASTNode, IASTNode> parentsNode) {
         //System.out.println(node.getRawSignature());
         //标号节点，按照先序遍历顺序
         nodeNum.put(node, 0);
         for (IASTNode child : node.getChildren()) {
-            createNodes(child , nodeNum);
-           // System.out.println( child.getClass().getSimpleName());
+            recordParents(child , nodeNum, parentsNode);
+            parentsNode.put(child, node);//记录每个节点的父节点
+            // System.out.println( child.getClass().getSimpleName());
         }
     }
 
@@ -89,9 +98,12 @@ public class CppASTTree {
         //不是叶子节点的不同节点
         if(nodeNum.get(node) == 0 && node.getChildren().length != 0 && !node.getChildren()[0].getClass().getSimpleName().equals("CPPASTName")){
           //  if(node.getChildren()[0].getRawSignature())
-            notSameNode.add(node);
+            //notSameNode.add(node);
+            nodeNum.put(node, 2);//不同节点的权重是2
             //System.out.println("print not same : " + node.getRawSignature());
-
+        }
+        else if(nodeNum.get(node) != 2){
+            nodeNum.put(node, 1);//相同节点的权重是1
         }
 
         for (IASTNode child : node.getChildren()) {

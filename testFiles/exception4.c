@@ -9,6 +9,6 @@ int main()
 		scanf("%d",&a);
 		x += a;
 	}
-    printf("%d\n",x);//打印结果
+    printf("%d\n",x + 1);//打印结果
     return 0;
 }
