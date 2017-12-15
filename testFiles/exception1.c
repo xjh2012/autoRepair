@@ -5,6 +5,9 @@ int main()
 	int i = 0;
 	int x = 0;
 	
+if(i == 0){
+  x = 1;
+}
 	for(i = 0; i < 3; i ++){
 		scanf("%d",&a);
 		x += a;

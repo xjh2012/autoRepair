@@ -78,6 +78,8 @@ public class GenProg {
         cppASTTree.createNodes(sourceFile);
         //int simpleNodeNumber = cppASTTree.simpleNodeNumber;
 
+
+
         HashMap<IASTNode,Integer> nodeNumA = cppASTTree.nodeNumA;
 
 
@@ -104,7 +106,7 @@ public class GenProg {
         //编译程序exception.c
         String testResult = basicSourseFile  + "testResult" + File.separator + "result.txt";
         PrintWriter pw = new PrintWriter(new FileWriter(new File(testResult)),true);
-
+/*
         boolean findCorrectMutationFlag = false;
         int cnt = 0;//迭代次数,可调节
         //到找到正确程序为止
@@ -257,7 +259,7 @@ public class GenProg {
 
 
         }
-
+*/
     }
 
 

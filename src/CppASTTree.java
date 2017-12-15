@@ -1,7 +1,9 @@
-import org.eclipse.cdt.core.dom.ast.IASTNode;
-import org.eclipse.cdt.core.dom.ast.IASTTranslationUnit;
+import org.eclipse.cdt.core.dom.ast.*;
+import org.eclipse.cdt.core.dom.rewrite.ASTRewrite;
 import org.eclipse.cdt.core.parser.ParserLanguage;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.ltk.core.refactoring.Change;
 
 import javax.swing.tree.DefaultMutableTreeNode;
 import java.io.File;
@@ -55,10 +57,11 @@ public class CppASTTree {
     }
 
     //create childNode, traverse the tree.
-    void createNodes(String sourseProgram) {
+    void createNodes(String sourseProgram) throws CoreException {
         //System.out.println(node.getRawSignature());
         //标号节点，按照先序遍历顺序
         IASTTranslationUnit tuTmp = CppParser.parse(sourseProgram, ParserLanguage.C, false);
+
 
        // System.out.println(tu.getRawSignature());
         //遍历语法树，添加所有子节点进top
@@ -70,9 +73,50 @@ public class CppASTTree {
         this.simpleNodeNumber = simpleTreeMatching(tu, tuTmp);
         System.out.println("simpleTreeMatching : " + this.simpleNodeNumber);
         //System.out.println("A Tree : ");
+//        System.out.println(tu.getRawSignature());
+//        CppASTVisitor visitor = new CppASTVisitor();
+//        tuTmp.accept(visitor);
+ //
+
         printNodes(tu, notSameNodeA, nodeNumA);
         // System.out.println("B Tree : ");
         printNodes(tuTmp, notSameNodeB, nodeNumB);
+
+
+       // System.out.println(newtemnode);
+
+        ASTRewrite rw = ASTRewrite.create(tuTmp);
+        IASTNode newtemnode = rw.createLiteralNode("x = x+122");
+
+        tuTmp.accept(new ASTVisitor(true) {
+
+            @Override
+            public int visit(IASTExpression stm) {
+
+                if (stm instanceof IASTExpression){
+//                    rw.insertBefore(stm.getParent(), stm,
+//                            rw.createLiteralNode("x=x+1"), null);
+                    rw.remove(stm, null);
+
+                    System.out.println();
+                    System.out.println(rw.rewriteAST());
+                    //((IASTIfStatement) stm).setConditionExpression((IASTExpression) newtemnode);
+
+                }
+
+                return PROCESS_CONTINUE;
+            }
+
+        });
+
+
+       // System.out.println(newtemnode.getTranslationUnit().getRawSignature());
+//        Change c = rw.rewriteAST();
+//        c.perform(new NullProgressMonitor());
+        //String changedSource = someHowGetCode(c);
+
+
+
 
     }
 
@@ -98,9 +142,9 @@ public class CppASTTree {
         //不是叶子节点的不同节点
         if(nodeNum.get(node) == 0 && node.getChildren().length != 0 && !node.getChildren()[0].getClass().getSimpleName().equals("CPPASTName")){
           //  if(node.getChildren()[0].getRawSignature())
-            //notSameNode.add(node);
+            notSameNode.add(node);
             nodeNum.put(node, 2);//不同节点的权重是2
-            //System.out.println("print not same : " + node.getRawSignature());
+           // System.out.println("print not same : " + node.getRawSignature());
         }
         else if(nodeNum.get(node) != 2){
             nodeNum.put(node, 1);//相同节点的权重是1

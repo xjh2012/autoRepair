@@ -1,6 +1,9 @@
 
+import org.eclipse.cdt.core.dom.ILinkage;
 import org.eclipse.cdt.core.dom.ast.*;
 import org.eclipse.cdt.core.dom.ast.cpp.*;
+import org.eclipse.cdt.core.dom.rewrite.ASTRewrite;
+import org.eclipse.ltk.core.refactoring.Change;
 
 /**
  * 邱景 创建于 2017/1/24.
@@ -57,6 +60,16 @@ public class CppASTVisitor extends ASTVisitor {
     // 索引类名和函数名
     @Override
     public int visit(IASTName name) {
+        System.out.println(name);
+        IASTNode temNode = name.copy();
+
+       /// ASTRewrite rewrite = ASTRewrite.create(name.getTranslationUnit());
+      //  rewrite.remove(name, null);
+      //   rewrite.replace(name, temNode, null);               // here the Exception occures
+      //  rewrite.rewriteAST();
+//        ASTRewrite.CommentPosition pos = leading;
+      //  System.out.println(name.getTranslationUnit().getRawSignature());
+
         IASTNode parent = name.getParent();
         if (parent instanceof ICPPASTCompositeTypeSpecifier) { // 类
 //            if (need_index(Value.CPP_CLASS_ID)) {
@@ -64,6 +77,8 @@ public class CppASTVisitor extends ASTVisitor {
 //            }
 
         } else if (parent instanceof ICPPASTFunctionDeclarator) {// 函数
+            System.out.println(name);
+
 //            if (need_index(Value.CPP_FUNCTION_ID)) {
 //                index(name, Value.CPP_FUNCTION_ID);
 //            }

@@ -1,4 +1,4 @@
-﻿#include <stdio.h>//主函数
+#include <stdio.h>//主函数
 int main()
 {
     int a,b,c;
