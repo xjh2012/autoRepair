@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5b739e7-33cb-4546-810d-4455190cd8da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GAFunBVar.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JavaASTTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JavaGenProg.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JavaParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JavaVisitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/util/ClassUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/util/ClassUtilTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/util/DynamicCompileTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/util/Sum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/util/threeNumbersPlus.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/autoRepair/GenProg$1.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/autoRepair/CppASTTree$NodeInfo.class" afterPath="$PROJECT_DIR$/out/production/autoRepair/CppASTTree$NodeInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/autoRepair/CppASTTree.class" afterPath="$PROJECT_DIR$/out/production/autoRepair/CppASTTree.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/autoRepair/CppASTVisitor.class" afterPath="$PROJECT_DIR$/out/production/autoRepair/CppASTVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/autoRepair/GenProg.class" afterPath="$PROJECT_DIR$/out/production/autoRepair/GenProg.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/LCSTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/autoRepair/JavaGenProg.class" afterPath="$PROJECT_DIR$/out/production/autoRepair/JavaGenProg.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autoRepair.iml" afterPath="$PROJECT_DIR$/autoRepair.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modelProgram/exception.c" afterPath="$PROJECT_DIR$/modelProgram/exception.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CppASTTree.java" afterPath="$PROJECT_DIR$/src/CppASTTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CppASTVisitor.java" afterPath="$PROJECT_DIR$/src/CppASTVisitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GenProg.java" afterPath="$PROJECT_DIR$/src/GenProg.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testFiles/exception1.c" afterPath="$PROJECT_DIR$/testFiles/exception1.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JavaGenProg.java" afterPath="$PROJECT_DIR$/src/JavaGenProg.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,7 +21,7 @@
       <file leaf-file-name="GenProg.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GenProg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
+            <state relative-caret-position="4048">
               <caret line="198" column="64" lean-forward="false" selection-start-line="198" selection-start-column="16" selection-end-line="198" selection-end-column="64" />
               <folding />
             </state>
@@ -56,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JavaGenProg.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JavaGenProg.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JavaGenProg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="320" column="25" lean-forward="true" selection-start-line="320" selection-start-column="25" selection-end-line="320" selection-end-column="25" />
+            <state relative-caret-position="-5605">
+              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5945#5961#0" expanded="true" />
@@ -70,12 +52,35 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="GAFunBVar.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GAFunBVar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="165" column="27" lean-forward="true" selection-start-line="165" selection-start-column="27" selection-end-line="165" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DynamicCompileTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/DynamicCompileTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="27" column="9" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="27" selection-end-column="9" />
+            <state relative-caret-position="0">
+              <caret line="36" column="90" lean-forward="false" selection-start-line="36" selection-start-column="86" selection-end-line="36" selection-end-column="90" />
               <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LCSTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LCSTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1404">
+              <caret line="70" column="2" lean-forward="false" selection-start-line="70" selection-start-column="2" selection-end-line="70" selection-end-column="2" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -90,16 +95,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="T.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/T.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -148,9 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/service/EntityServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/CppParser.java" />
-        <option value="$PROJECT_DIR$/lib/servlet-api.jar!/javax/servlet/http/HttpServletRequest.class" />
         <option value="$PROJECT_DIR$/src/ags/MainServlet.java" />
         <option value="$PROJECT_DIR$/lib/spring.jar!/org/springframework/beans/factory/BeanFactory.class" />
         <option value="$PROJECT_DIR$/lib/servlet-api.jar!/javax/servlet/ServletRequest.class" />
@@ -198,7 +190,10 @@
         <option value="$PROJECT_DIR$/JavaModelProgram/threeNumbersPlus.java" />
         <option value="$PROJECT_DIR$/JavaTestFiles/threeNumbersPlus.java" />
         <option value="$PROJECT_DIR$/src/util/DynamicCompileTest.java" />
+        <option value="$PROJECT_DIR$/lib/org.eclipse.jdt.core_3.13.0.v20170516-1929.jar!/org/eclipse/jdt/internal/core/dom/rewrite/ASTRewriteAnalyzer.class" />
+        <option value="$PROJECT_DIR$/lib/org.eclipse.jdt.core_3.13.0.v20170516-1929.jar!/org/eclipse/jdt/internal/core/dom/rewrite/TokenScanner.class" />
         <option value="$PROJECT_DIR$/src/JavaGenProg.java" />
+        <option value="$PROJECT_DIR$/src/LCSTest.java" />
       </list>
     </option>
   </component>
@@ -343,7 +338,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/code-search-java" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -371,7 +366,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JavaGenProg">
+  <component name="RunManager" selected="Application.LCSTest">
     <configuration default="false" name="threeNumbersPlus" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -395,21 +390,6 @@
     <configuration default="false" name="JavaGenProg" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="JavaGenProg" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="autoRepair" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="JavaASTTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="JavaASTTree" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -450,6 +430,21 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="util.DynamicCompileTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="autoRepair" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="LCSTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="LCSTest" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -909,17 +904,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.threeNumbersPlus" />
       <item index="1" class="java.lang.String" itemvalue="Application.JavaGenProg" />
-      <item index="2" class="java.lang.String" itemvalue="Application.JavaASTTree" />
-      <item index="3" class="java.lang.String" itemvalue="Application.ClassUtilTest" />
-      <item index="4" class="java.lang.String" itemvalue="Application.DynamicCompileTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.ClassUtilTest" />
+      <item index="3" class="java.lang.String" itemvalue="Application.DynamicCompileTest" />
+      <item index="4" class="java.lang.String" itemvalue="Application.LCSTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.JavaGenProg" />
-        <item index="1" class="java.lang.String" itemvalue="Application.DynamicCompileTest" />
-        <item index="2" class="java.lang.String" itemvalue="Application.threeNumbersPlus" />
-        <item index="3" class="java.lang.String" itemvalue="Application.ClassUtilTest" />
-        <item index="4" class="java.lang.String" itemvalue="Application.JavaASTTree" />
+        <item index="0" class="java.lang.String" itemvalue="Application.LCSTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.JavaGenProg" />
+        <item index="2" class="java.lang.String" itemvalue="Application.DynamicCompileTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.threeNumbersPlus" />
+        <item index="4" class="java.lang.String" itemvalue="Application.ClassUtilTest" />
       </list>
     </recent_temporary>
   </component>
@@ -950,12 +945,12 @@
       <workItem from="1511858564583" duration="12218000" />
       <workItem from="1512542936954" duration="17037000" />
       <workItem from="1512956139624" duration="41473000" />
-      <workItem from="1513214109607" duration="43705000" />
+      <workItem from="1513214109607" duration="63734000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208014000" />
+    <option name="totallyTimeSpent" value="228043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -981,7 +976,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2473573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2463002" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.215625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1012,28 +1007,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/reflect/Constructor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="59" column="19" lean-forward="false" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.jdt.core_3.13.0.v20170516-1929.jar!/org/eclipse/jdt/core/dom/ASTNode.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8448">
-          <caret line="38" column="48" lean-forward="false" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.jdt.core_3.13.0.v20170516-1929.jar!/org/eclipse/jdt/core/dom/Block.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.jdt.core_3.13.0.v20170516-1929.jar!/org/eclipse/jdt/core/dom/TextElement.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -1127,14 +1100,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.jdt.core_3.13.0.v20170516-1929.jar!/org/eclipse/jdt/core/dom/rewrite/ASTRewrite.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1378,26 +1343,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GenProg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="198" column="64" lean-forward="false" selection-start-line="198" selection-start-column="16" selection-end-line="198" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JavaMutation/TNPMutation0.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-88">
           <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JavaVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1418,19 +1367,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GAFunBVar.java">
+    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.jdt.core_3.13.0.v20170516-1929.jar!/org/eclipse/jdt/core/dom/rewrite/ASTRewrite.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1298">
-          <caret line="78" column="49" lean-forward="false" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="49" />
+        <state relative-caret-position="228">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.jdt.core_3.13.0.v20170516-1929.jar!/org/eclipse/jdt/internal/core/dom/rewrite/ASTRewriteAnalyzer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="913" column="0" lean-forward="false" selection-start-line="913" selection-start-column="0" selection-end-line="913" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.jdt.core_3.13.0.v20170516-1929.jar!/org/eclipse/jdt/internal/core/dom/rewrite/TokenScanner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GenProg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4048">
+          <caret line="198" column="64" lean-forward="false" selection-start-line="198" selection-start-column="16" selection-end-line="198" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/DynamicCompileTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="27" column="9" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="27" selection-end-column="9" />
+        <state relative-caret-position="0">
+          <caret line="36" column="90" lean-forward="false" selection-start-line="36" selection-start-column="86" selection-end-line="36" selection-end-column="90" />
           <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LCSTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1404">
+          <caret line="70" column="2" lean-forward="false" selection-start-line="70" selection-start-column="2" selection-end-line="70" selection-end-column="2" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -1438,13 +1430,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaGenProg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="320" column="25" lean-forward="true" selection-start-line="320" selection-start-column="25" selection-end-line="320" selection-end-column="25" />
+        <state relative-caret-position="-5605">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5945#5961#0" expanded="true" />
             <element signature="e#9653#9679#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GAFunBVar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="165" column="27" lean-forward="true" selection-start-line="165" selection-start-column="27" selection-end-line="165" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>

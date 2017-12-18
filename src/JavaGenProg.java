@@ -260,8 +260,9 @@ public class JavaGenProg {
                 if(listCnt <= listLength/2){
 
                     //变异体语法树返回变异体程序的节点
-                    String sourseProgram = mapping.getKey();
-                    sourceFillePath = new File(sourseProgram);//变异体路径
+                    String sourceProgram = mapping.getKey();
+
+                    sourceFillePath = new File(sourceProgram);//变异体路径
                     sourceJavaParser = new JavaParser();//变异体的语法树
                     fileString = javaParser.getCode(sourceFillePath);//变异体程序内容
 
@@ -269,13 +270,18 @@ public class JavaGenProg {
                     sourceJavaVisitor = new JavaVisitor();
                     sourceUnit.accept(sourceJavaVisitor);
                     sourceNodeList = sourceJavaVisitor.nodeList;//变异体程序的节点列表
+                    sizeOfSource = sourceNodeList.size();
 
-                    for(int i = 0; i < sizeOfModel; i ++){
-                        for(int j = 0; j < sizeOfSource; j ++) {
+                    cnt = 0;
+
+                    for(int i = 0; i < sizeOfSource; i ++){
+                        for(int j = 0; j < sizeOfModel; j ++) {
 
                             mutation_cnt ++;
                             Document document;
-                            document = new Document(mapping.getKey());//变异体路径
+                            document = new Document(fileString);//变异体路径
+
+                            System.out.println("document Program path :::: " + sourceProgram);
 
                             ASTRewrite rewriter = ASTRewrite.create(sourceUnit.getAST());//变异体重写语法树
                             AST ast = sourceUnit.getAST();
@@ -289,7 +295,7 @@ public class JavaGenProg {
                             //
                             // System.out.println(sourceNodeList.get(i).toString());
                             // System.out.println("B : \n" + rewriter.createStringPlaceholder(sourceNodeList.get(i).toString(), sourceNodeList.get(i).getNodeType()));
-
+                            TextEdit edits;
                             if (Math.random() < 0.6) {
                                 //两行不是完全相同的节点，父节点结构相同,才可以替换
                                 if (!sourceNodeList.get(i).toString().equals(nodeList.get(j).toString())
@@ -306,18 +312,20 @@ public class JavaGenProg {
                                         rewriter.remove(sourceNodeList.get(i), textEdits);
                                         //delete(mutationProgramParent);
                                     }
+
+                                    edits = rewriter.rewriteAST(document, null);
+                                    edits.apply(document);
+
+                                    //输入到新的文件中，变异体
+
+                                    String mutationFile = basicSourceFile + "JavaMutation" + iter_cnt + File.separator + "TNPMutation" + mutation_cnt + ".java";
+
+                                    System.out.println(mutationFile);
+                                    T.writeFile(mutationFile, document.get());
                                 }
                             }
 
-                            TextEdit edits = rewriter.rewriteAST(document, null);
-                            edits.apply(document);
 
-                            //输入到新的文件中，变异体
-
-                            String mutationFile = basicSourceFile + "JavaMutation" + iter_cnt + File.separator + "TNPMutation" + mutation_cnt + ".java";
-
-                            System.out.println(mutationFile);
-                            T.writeFile(mutationFile, document.get());
                         }
 
 
