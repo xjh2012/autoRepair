@@ -76,6 +76,17 @@ public class JavaGenProg {
         int sizeOfSource = sourceNodeList.size();
 
 
+        //存储变异过程<0,2,3>代表replace A2和B3节点，<1,4>代表delete A4节点
+        ArrayList<Integer> mutationAct = new ArrayList<>();
+
+        //存储变异序列，几次变异
+        LinkedList<ArrayList<Integer>> mutationSeq = new LinkedList<>();
+
+        //存储种群，种群用n个变异序列表示
+        ArrayList<LinkedList<ArrayList<Integer>>> group = new ArrayList<>();
+
+        //备用种群
+        ArrayList<LinkedList<ArrayList<Integer>>> groupTemp = new ArrayList<>();
 
         int cnt = 0;
         //生成第一代变异体,model中每个节点，对sourse中每个节点replace
@@ -99,23 +110,32 @@ public class JavaGenProg {
 
                 if(Math.random()<0.6){
                     //两行不是完全相同的节点，父节点结构相同,才可以替换
-                    if(!sourceNodeList.get(i).toString().equals(nodeList.get(j).toString())
-                            && sourceNodeList.get(i).getParent().getNodeType() == nodeList.get(j).getParent().getNodeType()){
+                    if(!sourceNodeList.get(j).toString().equals(nodeList.get(i).toString())
+                            && sourceNodeList.get(j).getParent().getNodeType() == nodeList.get(i).getParent().getNodeType()){
                         cnt ++;
                         // nodeList.get(i).setProperty(sourceNodeList.get(j).toString(),null);
                         System.out.println(cnt + "\nA : \n" + nodeList.get(i).toString() + "\n" + sourceNodeList.get(j).toString() + "\n");
-                        rewriter.replace(sourceNodeList.get(i),
-                                textElement,textEdits);
+                        rewriter.replace(sourceNodeList.get(i), textElement,textEdits);
+
+                        mutationAct.add(0);//replace
+                        mutationAct.add(j);//源程序
+                        mutationAct.add(i);//模板程序
+                        mutationSeq.add(mutationAct);//第一个变异动作存入变异序列
+
+
+                        group.add(mutationSeq);//种群中存储一个变异序列
+
+                        TextEdit edits = rewriter.rewriteAST(document, null);
+                        edits.apply(document);
+
+                        //输入到文件中，变异体
+                        String mutationFile = basicSourceFile  + "JavaMutation" + File.separator + "TNPMutation" + cnt + ".java";
+
+                        T.writeFile(mutationFile, document.get());
                     }
                 }
 
-                TextEdit edits = rewriter.rewriteAST(document, null);
-                edits.apply(document);
 
-                //输入到文件中，变异体
-                String mutationFile = basicSourceFile  + "JavaMutation" + File.separator + "TNPMutation" + cnt + ".java";
-
-                T.writeFile(mutationFile, document.get());
 
             }
         }//一代变异体生成结束
@@ -273,6 +293,8 @@ public class JavaGenProg {
                     sizeOfSource = sourceNodeList.size();
 
                     cnt = 0;
+
+
 
                     for(int i = 0; i < sizeOfSource; i ++){
                         for(int j = 0; j < sizeOfModel; j ++) {
