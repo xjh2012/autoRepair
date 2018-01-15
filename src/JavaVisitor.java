@@ -1,3 +1,4 @@
+import jdk.nashorn.internal.ir.BlockStatement;
 import org.eclipse.cdt.core.dom.ast.IASTNode;
 import org.eclipse.jdt.core.dom.*;
 
@@ -13,6 +14,13 @@ public class JavaVisitor extends ASTVisitor {
 
     @Override
     public boolean visit(ExpressionStatement node) {
+
+        System.out.println(node);
+        nodeList.add(node);
+        return true;
+    }
+
+    public boolean visit(Block node) {
 
         System.out.println(node);
         nodeList.add(node);

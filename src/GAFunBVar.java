@@ -200,10 +200,10 @@ public class GAFunBVar
             System.out.println("交叉选择的成员："+str);
 
         int len=temp_Group.length;
-        int index1=0,index2=0;
-        List<Integer> list=new ArrayList<Integer>();
+        int index1,index2;
+        List<Integer> list= new ArrayList<>();
         int length=len;
-        boolean flag=false;
+        boolean flag;
         int i=inter_start_index;
         while(length!=0)
         {
@@ -216,7 +216,7 @@ public class GAFunBVar
                 flag=isRepeatIndex(index2,list);
             } while (flag);
 
-            String[] temp=new String[2];
+            String[] temp;
             temp=intersect_B(temp_Group[index1],temp_Group[index2]);
             group[i++]=temp[0];
             group[i++]=temp[1];//群体，从2开始往后加
@@ -293,7 +293,7 @@ public class GAFunBVar
         System.out.println(gaFunBVar.x1+" "+gaFunBVar.x2);
 
         gaFunBVar.InitGroup();//初始群体
-        System.out.println("初始随机创建一个群体：");
+        System.out.println("初始随机创建一个群体 ：");
         for(int i=0;i<gaFunBVar.groupSize;i++)
         {
             System.out.println(gaFunBVar.group[i]);
@@ -303,24 +303,24 @@ public class GAFunBVar
         {
             //1.选择（轮盘赌方法）
             int rnewEntNum=(int)((1-gaFunBVar.r)*gaFunBVar.groupSize);//r：交叉取代群体成员的比例,0.5初始，群数量的一半
-            System.out.println("直接从父代选择成员作为后代的个数："+rnewEntNum);
+            System.out.println("直接从父代选择成员作为后代的个数 ："+rnewEntNum);
             gaFunBVar.chooseNewEnt(rnewEntNum);//按概率选择成员，不交叉的，直接保留，按照适应度的概率，概率高的容易留下
 
             //2.交叉
             int inter_pair=(int)(gaFunBVar.r*gaFunBVar.groupSize/2);//群数量的四分之一对，还是一半
-            System.out.println("要交叉的对数："+inter_pair);
+            System.out.println("要交叉的对数 ："+inter_pair);
             gaFunBVar.intersect(inter_pair,rnewEntNum);//其余选择的交叉，所以只交叉一部分
 
             //3.变异
             gaFunBVar.variation(gaFunBVar.group, gaFunBVar.m);//m变异率
-            System.out.println("变异后的群体为：");
+            System.out.println("变异后的群体为 ：");
             for(String str:gaFunBVar.group)
                 System.out.println(str);
             //
             gaFunBVar.getMaxFitness(gaFunBVar.group);
         }
 
-        System.out.println("最大的适应度为："+gaFunBVar.maxFitness);
-        System.out.println("达到最大适应度的个体为："+gaFunBVar.maxFitEntity);
+        System.out.println("最大的适应度为 ："+gaFunBVar.maxFitness);
+        System.out.println("达到最大适应度的个体为 ："+gaFunBVar.maxFitEntity);
     }
 }
