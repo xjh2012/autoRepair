@@ -18,7 +18,7 @@ import java.util.Map;
  */
 public class LCSTest {
     private static String lcs = "";
-    private static HashMap<ASTNode, Integer> weightOfNode = new HashMap<>();
+    public static HashMap<ASTNode, Integer> weightOfNode = new HashMap<>();
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
@@ -73,6 +73,13 @@ public class LCSTest {
         //System.out.println("lcs:"+lcs);
     }
 
+    public static void LCS(List<ASTNode> nodeList, List<ASTNode> sourceNodeList){
+
+        int[][] b = getSearchRoad(nodeList, sourceNodeList);
+
+        Display(b, nodeList, nodeList.size() - 1, sourceNodeList.size() - 1);
+
+    }
     /**
      * 字符串转数组，并且数组的第0个元素为""
      * @param str

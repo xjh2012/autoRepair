@@ -72,6 +72,10 @@ public class JavaGenProg {
         sourceUnit.accept(sourceJavaVisitor);
         List<ASTNode> sourceNodeList = sourceJavaVisitor.nodeList;//错误源程序的节点列表
 
+        LCSTest lcsTest = new LCSTest();
+        lcsTest.LCS(nodeList,sourceNodeList);
+
+
         int sizeOfModel = nodeList.size();
         int sizeOfSource = sourceNodeList.size();
 
@@ -105,7 +109,7 @@ public class JavaGenProg {
                // System.out.println(sourceNodeList.get(i).toString());
                // System.out.println("B : \n" + rewriter.createStringPlaceholder(sourceNodeList.get(i).toString(), sourceNodeList.get(i).getNodeType()));
 
-                if(Math.random()<0.6){
+
                     //两行不是完全相同的节点，父节点结构相同,才可以替换
                     if(!sourceNodeList.get(j).toString().equals(nodeList.get(i).toString())
                             && sourceNodeList.get(j).getParent().getNodeType() == nodeList.get(i).getParent().getNodeType()){
@@ -131,7 +135,7 @@ public class JavaGenProg {
 
                         T.writeFile(mutationFile, document.get());
                     }
-                }
+
 
             }
         }//一代变异体生成结束
@@ -140,7 +144,7 @@ public class JavaGenProg {
         boolean findCorrectMutationFlag = false;
         int iter_cnt = 0;//迭代次数,可调节
         //到找到正确程序为止
-        while(iter_cnt < 2){
+        while(iter_cnt < 7){
 
             iter_cnt++;
             File dir = new File(basicSourceFile + "JavaMutation"); //变异体目录
@@ -162,7 +166,7 @@ public class JavaGenProg {
                 //每个变异体执行所有测试用例，并比较输出结果，计算适应度
                 int passedNumber = 0;
                 int failedNumber = 0;
-                System.out.println(mutation_file.getAbsolutePath());
+                //System.out.println(mutation_file.getAbsolutePath());
 
                 try {
                     File sourceDir;
