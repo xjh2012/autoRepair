@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class threeNumbersPlus {
     public static void main(String[] args) throws IOException {
         // new CppASTTree();
-        int sum = 0;
+        int ans = 0;
         // Scanner sc = new Scanner(System.in);
 
         // read file content from file
@@ -34,18 +34,18 @@ public class threeNumbersPlus {
         while ((input_str = inputCase.readLine()) != null) {
             String input[] = input_str.split(delimiter);//测试用例元素组
             inputTest=input.length;
-            sum = 0;
+            ans = 0;
             for(int i = 0; i < inputTest; i ++){
                 String inputKeyboard = input[i];
-                int x = Integer.parseInt(inputKeyboard);
+                int y = Integer.parseInt(inputKeyboard);
 
-                sum += x + 1;
+                ans += y + 1;
 
             }
             // System.out.println(input_str + " =  " + output_str);
 
-            System.out.println(sum);
-            String sum_str = String.valueOf(sum) +"\n";
+            System.out.println(ans);
+            String sum_str = String.valueOf(ans) +"\n";
             fw.write(sum_str , 0, sum_str.length());
 
         }

@@ -1,17 +1,18 @@
 #include <stdio.h>//主函数
+int max(int x, int y){
+        int max;
+        if(x > y){
+            max = x;
+        }
+        else{
+            max = y;
+        }
+        return max;
+    }
 int main()
-{
-    int a;
-	int i = 0;
-	int x = 0;
-	
-if(i == 0){
-  x = 1;
-}
-	for(i = 0; i < 3; i ++){
-		scanf("%d",&a);
-		x += a;
-	}
-    printf("%d\n",x+1);//打印结果
-    return 0;
+{  
+        int x = 4
+        int y = 5
+       printf("%d\n", max(x,y));
+    
 }

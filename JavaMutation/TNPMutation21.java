@@ -39,7 +39,8 @@ public class threeNumbersPlus {
                 String inputKeyboard = input[i];
                 int x = Integer.parseInt(inputKeyboard);
 
-                sum += x + 1;
+                inputReader.close();
+				
 
             }
             // System.out.println(input_str + " =  " + output_str);
@@ -50,11 +51,9 @@ public class threeNumbersPlus {
 
         }
 
-        inputTest=input.length;
-		
+        inputCase.close();
         inputReader.close();
-        sum+=x;
-		
+        fw.flush();
 
     }
 

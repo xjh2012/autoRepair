@@ -130,56 +130,38 @@ public class SourceCompiler {
                 Process pc;
 
                 //生成.exe文件
-                binFile = new File(sourceDir + File.separator + "testResult" + File.separator + fileName.substring(0, fileName.lastIndexOf(".")) + "_gen.exe");
+                binFile = new File(sourceDir + File.separator + "testResult" + File.separator +
+                        fileName.substring(0, fileName.lastIndexOf(".")) + "_gen.exe");
                 if(binFile.exists()){
                     binFile.delete();
                 }
 
+                //gcc命令
                 String strCompile[] ={"gcc",
                         sourceDir + File.separator + "testFiles" + File.separator + fileName,
                         "-o",
                         binFile.getAbsolutePath()
                 };
 
-                // System.out.println(strCompile[0]);
-
                 //编译文件
                 pb = new ProcessBuilder(strCompile);
                 pc = pb.start();
                 pc.waitFor();
 
-                String[] cShell  =  {binFile.getAbsolutePath()};
-                String[] strShell;
-                strShell = cShell;
-
-                File destination = new File(binFile.getAbsolutePath());
                 try {
                     binFile.renameTo(new File(binFile.getAbsolutePath(),binFile.getName()));
                 } catch (Exception e) {
-
-                    statusRequest = statusRequest.concat("Failed transfering bin file");
-                    requestSuccess = false;
                     System.out.println(e);
-
                 } finally {
                     //response.flushBuffer();
                 }
-                String compileFileCommand = "gcc " + sourceDir + File.separator + "testFiles" + File.separator + fileName+" -o "+binFile.getAbsolutePath() ;
 
-                compileStartTime = System.currentTimeMillis();
-                compileEndTime = compileStartTime + 5000; //Five second
+                String compileFileCommand = "gcc " + sourceDir + File.separator + "testFiles" + File.separator + fileName+" -o "+
+                        binFile.getAbsolutePath() ;
 
                 Process processCompile = Runtime.getRuntime().exec(compileFileCommand);
-                if(System.currentTimeMillis()<compileEndTime)
-                {
-                    long frmtCompileTime = (System.currentTimeMillis()-compileStartTime)/1000;
-                    compileTime = frmtCompileTime+" ms - (No Time Limit Exceeded)";
-                }
-                else
-                {
-                    compileTime = (System.currentTimeMillis()-compileStartTime)/1000+" second - (Time Limit Exceeded)";
 
-                }
+
                // System.out.println(compileTime);
                 BufferedReader brCompileError = new BufferedReader(new InputStreamReader(processCompile.getErrorStream()));
                 String errorCompile = brCompileError.readLine();

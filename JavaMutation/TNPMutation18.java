@@ -35,24 +35,23 @@ public class threeNumbersPlus {
             String input[] = input_str.split(delimiter);//测试用例元素组
             inputTest=input.length;
             sum = 0;
-            for(int i = 0; i < inputTest; i ++)
-			 {
-			  String inputKeyboard=input[i];
-			  int x=Integer.parseInt(inputKeyboard);
-			  sum+=x;
-			}
-			
+            for(int i = 0; i < inputTest; i ++){
+                String inputKeyboard = input[i];
+                int x = Integer.parseInt(inputKeyboard);
 
-            inputCase.close();
-			
+                System.out.println(sum);
+				
+
+            }
+            // System.out.println(input_str + " =  " + output_str);
+
+            System.out.println(sum);
             String sum_str = String.valueOf(sum) +"\n";
-            sum+=x;
-			
+            fw.write(sum_str , 0, sum_str.length());
 
         }
 
-        inputTest=input.length;
-		
+        inputCase.close();
         inputReader.close();
         fw.flush();
 

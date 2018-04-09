@@ -36,12 +36,17 @@ public class CppASTTree {
 
     IASTTranslationUnit tu = null;
 
-    public CppASTTree(String modelProgram) {
+    public CppASTTree(String modelProgram) throws CoreException {
         System.out.println( System.getProperty("user.dir") + File.separator + "testFiles" + File.separator);
         //模板程序语法分析
         //Create the nodes.语法树根节点
         this.tu = CppParser.parse(modelProgram, ParserLanguage.C, false);
         recordParents(tu, nodeNumA, modelParentNode);
+        try {
+            createNodes(modelProgram);
+        } catch (CoreException e) {
+            e.printStackTrace();
+        }
     }
 
     private class NodeInfo {
@@ -99,7 +104,7 @@ public class CppASTTree {
                     rw.remove(stm, null);
 
                     System.out.println();
-                    System.out.println(rw.rewriteAST());
+//                    System.out.println(rw.rewriteAST());
                     //((IASTIfStatement) stm).setConditionExpression((IASTExpression) newtemnode);
 
                 }
@@ -111,8 +116,8 @@ public class CppASTTree {
 
 
        // System.out.println(newtemnode.getTranslationUnit().getRawSignature());
-//        Change c = rw.rewriteAST();
-//        c.perform(new NullProgressMonitor());
+        Change c = rw.rewriteAST();
+        c.perform(new NullProgressMonitor());
         //String changedSource = someHowGetCode(c);
 
 
@@ -268,6 +273,9 @@ public class CppASTTree {
 
 
     public static void main(String[] args) throws CoreException, IOException, InterruptedException {
-       // new CppASTTree();
+        String basicSourseFile = System.getProperty("user.dir") + File.separator;
+        //模板程序
+        String modelSourceFile = basicSourseFile + "modelProgram" + File.separator + "exception.c";
+       new CppASTTree(modelSourceFile);
     }
 }

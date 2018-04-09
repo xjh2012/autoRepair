@@ -97,17 +97,18 @@ public class JavaGenProg {
 
                 ASTRewrite rewriter = ASTRewrite.create(sourceUnit.getAST());
                 AST ast = sourceUnit.getAST();
+
                 TextEditGroup textEdits = new TextEditGroup("test");
 
                 TextElement textElement = ast.newTextElement();
                 textElement.setText(nodeList.get(j).toString());
 
-             //   System.out.println(textElement.getText());
+                //   System.out.println(textElement.getText());
 
 //                ast.newName(sourceNodeList.get(j).toString());
-               // rewriter.remove(sourceNodeList.get(i), textEdits);
-               // System.out.println(sourceNodeList.get(i).toString());
-               // System.out.println("B : \n" + rewriter.createStringPlaceholder(sourceNodeList.get(i).toString(), sourceNodeList.get(i).getNodeType()));
+                // rewriter.remove(sourceNodeList.get(i), textEdits);
+                // System.out.println(sourceNodeList.get(i).toString());
+                // System.out.println("B : \n" + rewriter.createStringPlaceholder(sourceNodeList.get(i).toString(), sourceNodeList.get(i).getNodeType()));
 
 
                     //两行不是完全相同的节点，父节点结构相同,才可以替换
@@ -135,8 +136,6 @@ public class JavaGenProg {
 
                         T.writeFile(mutationFile, document.get());
                     }
-
-
             }
         }//一代变异体生成结束
 
@@ -144,7 +143,7 @@ public class JavaGenProg {
         boolean findCorrectMutationFlag = false;
         int iter_cnt = 0;//迭代次数,可调节
         //到找到正确程序为止
-        while(iter_cnt < 7){
+        while(iter_cnt < 2){
 
             iter_cnt++;
             File dir = new File(basicSourceFile + "JavaMutation"); //变异体目录
@@ -171,14 +170,19 @@ public class JavaGenProg {
                 try {
                     File sourceDir;
 
-                        sourceDir = new File(System.getProperty("user.dir") + File.separator + "JavaMutation"); //临时目录
-
+                    sourceDir = new File(System.getProperty("user.dir") + File.separator + "JavaMutation"); //临时目录
 
                     String mutation_name = "TNPMutation" + mutationNumber + ".java";
 
+                    String exe_mutation_name = "threeNumbersPlus" + ".java";
+
+                    File mutant_file = new File(sourceDir + File.separator + mutation_name);
+                    File exe_mutant_file = new File(sourceDir + File.separator + exe_mutation_name);
+                    copyFile(mutant_file, exe_mutant_file);
+
                     //编译执行变异体，直接结果写入文件中
                     DynamicCompileTest dynamicCompileTest = new DynamicCompileTest();
-                    dynamicCompileTest.compile(sourceDir, mutation_name);
+                    dynamicCompileTest.compile(sourceDir, exe_mutation_name);
 
                     // read file content from file
                     StringBuffer sb = new StringBuffer("");
@@ -434,4 +438,26 @@ public class JavaGenProg {
         }
         return flag;
     }
+
+    /**
+     * 复制文件
+     * @param fromFile
+     * @param toFile
+     * <br/>
+     * 2016年12月19日  下午3:31:50
+     * @throws IOException
+     */
+    public static void copyFile(File fromFile, File toFile) throws IOException{
+        FileInputStream ins = new FileInputStream(fromFile);
+        FileOutputStream out = new FileOutputStream(toFile);
+        byte[] b = new byte[1024];
+        int n=0;
+        while((n=ins.read(b))!=-1){
+            out.write(b, 0, n);
+        }
+
+        ins.close();
+        out.close();
+    }
+
 }

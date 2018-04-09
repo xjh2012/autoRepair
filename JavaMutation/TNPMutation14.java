@@ -31,14 +31,29 @@ public class threeNumbersPlus {
         String delimiter = " ";
 
         //对每一个测试用例
-        while ((input_str = inputCase.readLine()) != null)
-			fw.flush();
+        while ((input_str = inputCase.readLine()) != null) {
+            String input[] = input_str.split(delimiter);//测试用例元素组
+            inputTest=input.length;
+            fw.flush();
 			
+            for(int i = 0; i < inputTest; i ++){
+                String inputKeyboard = input[i];
+                int x = Integer.parseInt(inputKeyboard);
+
+                sum += x + 1;
+
+            }
+            // System.out.println(input_str + " =  " + output_str);
+
+            System.out.println(sum);
+            String sum_str = String.valueOf(sum) +"\n";
+            fw.write(sum_str , 0, sum_str.length());
+
+        }
 
         inputCase.close();
         inputReader.close();
-        sum=0;
-		
+        fw.flush();
 
     }
 

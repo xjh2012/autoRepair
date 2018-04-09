@@ -40,24 +40,20 @@ public class threeNumbersPlus {
                 String inputKeyboard = input[i];
                 int x = Integer.parseInt(inputKeyboard);
 
-                fw.write(sum_str,0,sum_str.length());
-				
+                sum += x + 1;
 
             }
             // System.out.println(input_str + " =  " + output_str);
 
-            sum+=x;
-			
+            System.out.println(sum);
             String sum_str = String.valueOf(sum) +"\n";
-            sum+=x;
-			
+            fw.write(sum_str , 0, sum_str.length());
 
         }
 
         inputCase.close();
         inputReader.close();
-        inputReader.close();
-		
+        fw.flush();
 
     }
 

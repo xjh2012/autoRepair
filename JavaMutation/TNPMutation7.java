@@ -33,7 +33,8 @@ public class threeNumbersPlus {
         //对每一个测试用例
         while ((input_str = inputCase.readLine()) != null) {
             String input[] = input_str.split(delimiter);//测试用例元素组
-            inputTest=input.length;
+            fw.flush();
+			
             sum = 0;
             for(int i = 0; i < inputTest; i ++){
                 String inputKeyboard = input[i];
@@ -50,11 +51,9 @@ public class threeNumbersPlus {
 
         }
 
-        inputTest=input.length;
-		
+        inputCase.close();
         inputReader.close();
-        sum+=x;
-		
+        fw.flush();
 
     }
 

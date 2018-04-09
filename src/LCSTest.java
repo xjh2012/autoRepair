@@ -75,6 +75,7 @@ public class LCSTest {
 
     public static void LCS(List<ASTNode> nodeList, List<ASTNode> sourceNodeList){
 
+
         int[][] b = getSearchRoad(nodeList, sourceNodeList);
 
         Display(b, nodeList, nodeList.size() - 1, sourceNodeList.size() - 1);

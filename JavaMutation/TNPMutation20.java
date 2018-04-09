@@ -32,22 +32,26 @@ public class threeNumbersPlus {
 
         //对每一个测试用例
         while ((input_str = inputCase.readLine()) != null) {
-		  String input[]=input_str.split(delimiter);
-		  inputTest=input.length;
-		  sum=0;
-		  for (int i=0; i < inputTest; i++) {
-		    String inputKeyboard=input[i];
-		    int x=Integer.parseInt(inputKeyboard);
-		    sum+=x;
-		  }
-		  System.out.println(sum);
-		  String sum_str=String.valueOf(sum) + "\n";
-		  fw.write(sum_str,0,sum_str.length());
-		}
-		
+            String input[] = input_str.split(delimiter);//测试用例元素组
+            inputTest=input.length;
+            sum = 0;
+            for(int i = 0; i < inputTest; i ++){
+                String inputKeyboard = input[i];
+                int x = Integer.parseInt(inputKeyboard);
 
-        inputTest=input.length;
-		
+                inputCase.close();
+				
+
+            }
+            // System.out.println(input_str + " =  " + output_str);
+
+            System.out.println(sum);
+            String sum_str = String.valueOf(sum) +"\n";
+            fw.write(sum_str , 0, sum_str.length());
+
+        }
+
+        inputCase.close();
         inputReader.close();
         fw.flush();
 
