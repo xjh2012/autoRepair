@@ -1,7 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5b739e7-33cb-4546-810d-4455190cd8da" name="Default" comment="" />
+    <list default="true" id="f5b739e7-33cb-4546-810d-4455190cd8da" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/autoRepair/GenProg.class" afterPath="$PROJECT_DIR$/out/production/autoRepair/GenProg.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/autoRepair/JavaVisitor.class" afterPath="$PROJECT_DIR$/out/production/autoRepair/JavaVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/autoRepair/ags/SourceCompiler.class" afterPath="$PROJECT_DIR$/out/production/autoRepair/ags/SourceCompiler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/autoRepair/testforinterview.class" afterPath="$PROJECT_DIR$/out/production/autoRepair/testforinterview.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/util/threeNumbersPlus.class" afterPath="$PROJECT_DIR$/temp/util/threeNumbersPlus.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaModelProgram/threeNumbersPlus.java" afterPath="$PROJECT_DIR$/JavaModelProgram/threeNumbersPlus.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation1.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation10.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation10.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation11.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation11.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation12.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation12.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation13.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation13.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation14.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation14.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation15.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation15.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation16.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation16.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation17.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation17.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation18.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation18.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation19.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation19.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation2.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation20.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation20.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation21.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation21.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation22.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation22.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation23.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation23.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation24.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation24.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation25.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation25.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation26.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation26.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation27.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation27.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation28.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation28.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation29.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation29.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation3.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation3.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation30.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation30.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation31.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation31.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation32.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation32.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation33.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation33.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation34.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation34.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation35.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation35.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation36.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation36.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation37.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation37.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation38.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation38.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation39.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation39.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation4.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation4.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation40.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation40.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation41.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation41.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation42.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation42.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation43.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation43.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation44.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation44.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation45.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation45.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation46.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation46.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation47.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation47.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation48.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation48.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation49.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation49.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation5.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation5.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation50.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation50.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation51.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation51.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation52.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation52.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation53.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation53.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation54.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation54.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation55.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation55.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation56.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation56.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation57.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation57.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation58.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation58.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation59.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation59.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation6.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation6.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation60.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation60.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation7.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation7.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation8.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation8.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation9.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation9.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/threeNumbersPlus.java" afterPath="$PROJECT_DIR$/JavaMutation/threeNumbersPlus.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaTestFiles/threeNumbersPlus.java" afterPath="$PROJECT_DIR$/JavaTestFiles/threeNumbersPlus.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaTestResult/threeWordPlus_output.txt" afterPath="$PROJECT_DIR$/JavaTestResult/threeWordPlus_output.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JavaVisitor.java" afterPath="$PROJECT_DIR$/src/JavaVisitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/testforinterview.java" afterPath="$PROJECT_DIR$/src/testforinterview.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,8 +89,8 @@
       <file leaf-file-name="JavaGenProg.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JavaGenProg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2430">
-              <caret line="184" column="41" lean-forward="false" selection-start-line="184" selection-start-column="41" selection-end-line="184" selection-end-column="41" />
+            <state relative-caret-position="218">
+              <caret line="196" column="42" lean-forward="false" selection-start-line="196" selection-start-column="42" selection-end-line="196" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -24,21 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JavaASTSourceTree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/JavaASTSourceTree.java">
+      <file leaf-file-name="testforinterview.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/testforinterview.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testsaima.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/testsaima.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+            <state relative-caret-position="240">
+              <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,33 +110,58 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenProg.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GenProg.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="143" column="90" lean-forward="true" selection-start-line="143" selection-start-column="90" selection-end-line="143" selection-end-column="90" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SourceCompiler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ags/SourceCompiler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2115">
-              <caret line="171" column="55" lean-forward="false" selection-start-line="171" selection-start-column="55" selection-end-line="171" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CppASTTree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CppASTTree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
-              <caret line="118" column="29" lean-forward="false" selection-start-line="118" selection-start-column="29" selection-end-line="118" selection-end-column="29" />
+            <state relative-caret-position="252">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
-                <element signature="class#NodeInfo#0;class#CppASTTree#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JavaVisitor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JavaVisitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="85" column="18" lean-forward="true" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
+              <folding>
+                <element signature="e#1954#1955#0" expanded="true" />
+                <element signature="e#1979#1980#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ASTVisitor.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.jdt.core_3.13.0.v20170516-1929.jar!/org/eclipse/jdt/core/dom/ASTVisitor.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="221" column="42" lean-forward="false" selection-start-line="221" selection-start-column="25" selection-end-line="221" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JavaASTTree.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JavaASTTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="57" column="33" lean-forward="true" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DynamicCompileTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/DynamicCompileTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="57" column="56" lean-forward="false" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,7 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/org.eclipse.cdt.core_6.0.0.201606062011.jar!/org/eclipse/cdt/core/dom/rewrite/ASTRewrite.class" />
         <option value="$PROJECT_DIR$/lib/org.eclipse.cdt.core_6.0.0.201606062011.jar!/org/eclipse/cdt/internal/core/dom/parser/ASTTranslationUnit.class" />
         <option value="$PROJECT_DIR$/lib/org.eclipse.text_3.6.0.v20160503-1849.jar!/org/eclipse/jface/text/AbstractDocument.class" />
         <option value="$PROJECT_DIR$/src/CppASTVisitor.java" />
@@ -150,21 +238,22 @@
         <option value="$PROJECT_DIR$/lib/org.eclipse.jdt.core_3.13.0.v20170516-1929.jar!/org/eclipse/jdt/internal/core/dom/rewrite/ASTRewriteAnalyzer.class" />
         <option value="$PROJECT_DIR$/lib/org.eclipse.jdt.core_3.13.0.v20170516-1929.jar!/org/eclipse/jdt/internal/core/dom/rewrite/TokenScanner.class" />
         <option value="$PROJECT_DIR$/lib/org.eclipse.text_3.6.0.v20160503-1849.jar!/org/eclipse/jface/text/Document.class" />
-        <option value="$PROJECT_DIR$/src/JavaVisitor.java" />
         <option value="$PROJECT_DIR$/src/Compare.java" />
         <option value="$PROJECT_DIR$/src/SourceJavaASTTree.java" />
         <option value="$PROJECT_DIR$/src/TestCPPASTTree.java" />
         <option value="$PROJECT_DIR$/src/JavaASTTree.java" />
         <option value="$PROJECT_DIR$/src/LCSTest.java" />
         <option value="$PROJECT_DIR$/src/LCSforArray.java" />
-        <option value="$PROJECT_DIR$/src/testforinterview.java" />
         <option value="$PROJECT_DIR$/src/JavaGenProg.java" />
-        <option value="$PROJECT_DIR$/src/util/DynamicCompileTest.java" />
         <option value="$PROJECT_DIR$/src/testsaima.java" />
         <option value="$PROJECT_DIR$/src/JavaASTSourceTree.java" />
         <option value="$PROJECT_DIR$/src/CppASTTree.java" />
         <option value="$PROJECT_DIR$/src/GenProg.java" />
         <option value="$PROJECT_DIR$/src/ags/SourceCompiler.java" />
+        <option value="$PROJECT_DIR$/src/testforinterview.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/util/DynamicCompileTest.java" />
+        <option value="$PROJECT_DIR$/src/JavaVisitor.java" />
       </list>
     </option>
   </component>
@@ -193,7 +282,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,9 +315,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -267,24 +356,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.testsaima">
-    <configuration name="CppASTTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.JavaASTTree">
+    <configuration name="GenProg" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="CppASTTree" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="autoRepair" />
-      <envs />
-    </configuration>
-    <configuration name="JavaASTSourceTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="JavaASTSourceTree" />
+      <option name="MAIN_CLASS_NAME" value="GenProg" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -299,6 +374,34 @@
     <configuration name="JavaASTTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="JavaASTTree" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="autoRepair" />
+      <envs />
+    </configuration>
+    <configuration name="JavaGenProg" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="JavaGenProg" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="autoRepair" />
+      <envs />
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -744,20 +847,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration name="testforinterview" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="testforinterview" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="autoRepair" />
-      <envs />
-    </configuration>
     <configuration name="testsaima" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="testsaima" />
@@ -773,19 +862,19 @@
       <envs />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.JavaASTTree" />
-      <item index="1" class="java.lang.String" itemvalue="Application.testsaima" />
-      <item index="2" class="java.lang.String" itemvalue="Application.testforinterview" />
-      <item index="3" class="java.lang.String" itemvalue="Application.CppASTTree" />
-      <item index="4" class="java.lang.String" itemvalue="Application.JavaASTSourceTree" />
+      <item index="0" class="java.lang.String" itemvalue="Application.testsaima" />
+      <item index="1" class="java.lang.String" itemvalue="Application.GenProg" />
+      <item index="2" class="java.lang.String" itemvalue="Application.JavaGenProg" />
+      <item index="3" class="java.lang.String" itemvalue="Application.JavaASTTree" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.testsaima" />
-        <item index="1" class="java.lang.String" itemvalue="Application.JavaASTSourceTree" />
-        <item index="2" class="java.lang.String" itemvalue="Application.CppASTTree" />
-        <item index="3" class="java.lang.String" itemvalue="Application.testforinterview" />
-        <item index="4" class="java.lang.String" itemvalue="Application.JavaASTTree" />
+        <item index="0" class="java.lang.String" itemvalue="Application.JavaASTTree" />
+        <item index="1" class="java.lang.String" itemvalue="Application.JavaGenProg" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="3" class="java.lang.String" itemvalue="Application.GenProg" />
+        <item index="4" class="java.lang.String" itemvalue="Application.testsaima" />
       </list>
     </recent_temporary>
   </component>
@@ -832,12 +921,13 @@
       <workItem from="1519433617209" duration="35429000" />
       <workItem from="1522285738284" duration="6880000" />
       <workItem from="1522414767076" duration="151000" />
-      <workItem from="1523235451819" duration="401000" />
+      <workItem from="1523235451819" duration="10723000" />
+      <workItem from="1524656070265" duration="4271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="315624000" />
+    <option name="totallyTimeSpent" value="330217000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -845,12 +935,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24588235" sideWeight="0.50555557" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4752941" sideWeight="0.49444443" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22588235" sideWeight="0.49444443" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -872,7 +963,6 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20235294" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -894,34 +984,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.jdt.core_3.13.0.v20170516-1929.jar!/org/eclipse/jdt/internal/core/dom/rewrite/TokenScanner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.text_3.6.0.v20160503-1849.jar!/org/eclipse/jface/text/Document.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JavaParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="52" column="5" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="52" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/NodeInformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GAFunBVar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
@@ -1007,13 +1069,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.jdt.core_3.13.0.v20170516-1929.jar!/org/eclipse/jdt/core/dom/ASTVisitor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="61" column="29" lean-forward="true" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.jdt.core_3.13.0.v20170516-1929.jar!/org/eclipse/jdt/core/dom/Assignment.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -1071,13 +1126,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JavaModelProgram/threeNumbersPlus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BaseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1107,14 +1155,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JavaVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TestCPPASTTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1130,32 +1170,6 @@
         <state relative-caret-position="1020">
           <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JavaASTTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1150">
-          <caret line="113" column="40" lean-forward="true" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/DynamicCompileTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/testforinterview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1216,30 +1230,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Runtime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="345" column="19" lean-forward="false" selection-start-line="345" selection-start-column="19" selection-end-line="345" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GenProg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="123" column="34" lean-forward="false" selection-start-line="123" selection-start-column="34" selection-end-line="123" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CppASTTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="118" column="29" lean-forward="false" selection-start-line="118" selection-start-column="29" selection-end-line="118" selection-end-column="29" />
+        <state relative-caret-position="366">
+          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding>
             <element signature="class#NodeInfo#0;class#CppASTTree#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JavaGenProg.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2430">
-          <caret line="184" column="41" lean-forward="false" selection-start-line="184" selection-start-column="41" selection-end-line="184" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="252">
+          <caret line="660" column="23" lean-forward="false" selection-start-line="660" selection-start-column="23" selection-end-line="660" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/io/FileInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaASTSourceTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="420">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1254,26 +1289,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Runtime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="345" column="19" lean-forward="false" selection-start-line="345" selection-start-column="19" selection-end-line="345" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ags/SourceCompiler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2115">
-          <caret line="171" column="55" lean-forward="false" selection-start-line="171" selection-start-column="55" selection-end-line="171" selection-end-column="55" />
+        <state relative-caret-position="1770">
+          <caret line="148" column="29" lean-forward="true" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GenProg.java">
+    <entry file="file://$PROJECT_DIR$/JavaModelProgram/threeNumbersPlus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="143" column="90" lean-forward="true" selection-start-line="143" selection-start-column="90" selection-end-line="143" selection-end-column="90" />
+        <state relative-caret-position="109">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testforinterview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/DynamicCompileTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="57" column="56" lean-forward="false" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaGenProg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="196" column="42" lean-forward="false" selection-start-line="196" selection-start-column="42" selection-end-line="196" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaASTTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="57" column="33" lean-forward="true" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.jdt.core_3.13.0.v20170516-1929.jar!/org/eclipse/jdt/core/dom/ASTVisitor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="221" column="42" lean-forward="false" selection-start-line="221" selection-start-column="25" selection-end-line="221" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.jdt.core_3.13.0.v20170516-1929.jar!/org/eclipse/jdt/core/dom/MethodDeclaration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="356" column="22" lean-forward="false" selection-start-line="356" selection-start-column="22" selection-end-line="356" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="85" column="18" lean-forward="true" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
+          <folding>
+            <element signature="e#1954#1955#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

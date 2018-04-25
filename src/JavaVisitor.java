@@ -34,11 +34,47 @@ public class JavaVisitor extends ASTVisitor {
     @Override
     public boolean visit(ExpressionStatement node) {
 
-
-
         //System.out.println(node);
         nodeList.add(node);
         es.add(node);
+        return true;
+    }
+
+    public boolean visit(IfStatement node) {
+
+        //System.out.println(node);
+        nodeList.add(node);
+        return true;
+    }
+
+    public boolean visit(WhileStatement node) {
+
+        //System.out.println(node);
+        nodeList.add(node);
+        return true;
+    }
+
+    public boolean visit(ForStatement node) {
+
+        //System.out.println(node);
+        nodeList.add(node);
+        return true;
+    }
+
+    public boolean visit(ReturnStatement node) {
+
+        //System.out.println(node);
+        nodeList.add(node);
+        return true;
+    }
+
+    public boolean visit(MethodDeclaration node) {
+
+        System.out.println(node.getName());
+        if(node.getName().toString().equals("main")){
+            System.out.println(node.getBody().getParent() );
+        }
+        //nodeList.add(node);
         return true;
     }
 
