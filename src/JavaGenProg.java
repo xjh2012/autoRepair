@@ -1,14 +1,7 @@
-import org.eclipse.cdt.core.dom.ast.IASTNode;
-import org.eclipse.core.resources.IProject;
-import org.eclipse.core.resources.IncrementalProjectBuilder;
+
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.IProgressMonitor;
-import org.eclipse.jdt.core.ICompilationUnit;
 import org.eclipse.jdt.core.dom.*;
 import org.eclipse.jdt.core.dom.rewrite.ASTRewrite;
-import org.eclipse.jdt.core.dom.rewrite.ListRewrite;
-import org.eclipse.jdt.internal.compiler.DefaultErrorHandlingPolicies;
-import org.eclipse.jdt.internal.compiler.problem.DefaultProblemFactory;
 import org.eclipse.jface.text.BadLocationException;
 import org.eclipse.jface.text.Document;
 import org.eclipse.text.edits.TextEdit;
@@ -16,11 +9,7 @@ import org.eclipse.text.edits.TextEditGroup;
 
 import util.DynamicCompileTest;
 import java.io.*;
-import java.lang.reflect.Constructor;
 import java.util.*;
-
-import static thredds.featurecollection.FeatureCollectionConfig.PartitionType.file;
-import static util.CodeFileReader.getCode;
 
 /**
  * Created by xjh on 2017/12/11.
@@ -28,22 +17,6 @@ import static util.CodeFileReader.getCode;
 public class JavaGenProg {
     //E:\autoRepair\
     private static String sourceFile = System.getProperty("user.dir") + File.separator;
-    private static void replace(IASTNode A, IASTNode B) throws CoreException {
-
-        //输入到文件中，变异体
-        String mutationFile = sourceFile  + "mutation" + File.separator + "exception.c";
-        T.writeFile(mutationFile, null);
-    }
-
-    private static void delete(IASTNode A){
-
-        // System.out.println(iastNode.getTranslationUnit().getRawSignature());
-    }
-
-    private static void insert(IASTNode A, IASTNode B){
-
-        // System.out.println(B.getTranslationUnit().getRawSignature());
-    }
 
     public static void main(String[] args) throws CoreException, IOException, InterruptedException, BadLocationException {
 
@@ -143,7 +116,7 @@ public class JavaGenProg {
         boolean findCorrectMutationFlag = false;
         int iter_cnt = 0;//迭代次数,可调节
         //到找到正确程序为止
-        while(iter_cnt < 2){
+        while(iter_cnt < 3){
 
             iter_cnt++;
             File dir = new File(basicSourceFile + "JavaMutation"); //变异体目录
@@ -156,96 +129,101 @@ public class JavaGenProg {
             int mutationNumber = 0;
 
             File[] mutationFiles = new File(basicSourceFile + "JavaMutation").listFiles();
+            System.out.println("mutationFiles.length      :      "+mutationFiles.length);
 
             //每个变异体的适应度映射，用变异序列和fitness映射
             Map<ArrayList<Integer>, Double> fitnessMap = new HashMap<>();
 
             for(File mutation_file : mutationFiles){
-                mutationNumber ++;
-                //每个变异体执行所有测试用例，并比较输出结果，计算适应度
-                int passedNumber = 0;
-                int failedNumber = 0;
-                //System.out.println(mutation_file.getAbsolutePath());
+                if(!mutation_file.isDirectory()) {
+                    mutationNumber++;
+                    System.out.println("mutation/number : " + mutationNumber);
+                    //每个变异体执行所有测试用例，并比较输出结果，计算适应度
+                    int passedNumber = 0;
+                    int failedNumber = 0;
+                    //System.out.println(mutation_file.getAbsolutePath());
+                    File mutant_file = null;
+                    try {
+                        File sourceDir;
+                        File sourceDir_exec;
 
-                try {
-                    File sourceDir;
+                        sourceDir = new File(System.getProperty("user.dir") + File.separator + "JavaMutation"); //存放变异体目录
+                        sourceDir_exec = new File(System.getProperty("user.dir") + File.separator + "JavaExecProgram");//执行文件的临时目录
 
-                    sourceDir = new File(System.getProperty("user.dir") + File.separator + "JavaMutation"); //临时目录
+                        String mutation_name = "TNPMutation" + mutationNumber + ".java";
 
-                    String mutation_name = "TNPMutation" + mutationNumber + ".java";
+                        String exe_mutation_name = "threeNumbersPlus" + ".java";
 
-                    String exe_mutation_name = "threeNumbersPlus" + ".java";
-
-                    File mutant_file = new File(sourceDir + File.separator + mutation_name);
-                    File exe_mutant_file = new File(sourceDir + File.separator + exe_mutation_name);
-                    copyFile(mutant_file, exe_mutant_file);
-
-                    //编译执行变异体，直接结果写入文件中
-                    DynamicCompileTest dynamicCompileTest = new DynamicCompileTest();
-                    dynamicCompileTest.compile(sourceDir, exe_mutation_name);
-
-                    // read file content from file
-                    StringBuffer sb = new StringBuffer("");
+                        mutant_file = new File(sourceDir + File.separator + mutation_name);
+                        File exe_mutant_file = new File(sourceDir_exec + File.separator + exe_mutation_name);
+                        copyFile(mutant_file, exe_mutant_file);
+                        System.out.println("mutant_file" + mutant_file);
+                        System.out.println("exe_mutant_file" + exe_mutant_file);
 
 
-                    //读文件中的期待输出
-                    FileReader outputExceptionReader = new FileReader(basicSourceFile + "JavaCorrectOutput" + File.separator + "compareOuput.txt");
-                    BufferedReader outputCase = new BufferedReader(outputExceptionReader);
+                        //编译执行变异体，直接结果写入文件中
+                        DynamicCompileTest dynamicCompileTest = new DynamicCompileTest();
+                        dynamicCompileTest.compile(sourceDir_exec, exe_mutation_name);
 
-                    //读变异体的输出
-                    FileReader mutationOutputReader = new FileReader(basicSourceFile + "JavaTestResult" + File.separator + "threeWordPlus_output.txt");
-                    BufferedReader mutationOutputCase = new BufferedReader(mutationOutputReader);
+                        // read file content from file
+                        StringBuffer sb = new StringBuffer("");
 
-                    //输入的每行，期待输出的每行
-                    String mutation_output_str = null;
-                    String model_output_str = null;
 
-                    //对每一个测试用例
-                    while((mutation_output_str = outputCase.readLine()) != null && (model_output_str = mutationOutputCase.readLine()) != null) {
+                        //读文件中的期待输出
+                        FileReader outputExceptionReader = new FileReader(basicSourceFile + "JavaCorrectOutput" + File.separator + "compareOuput.txt");
+                        BufferedReader outputCase = new BufferedReader(outputExceptionReader);
 
-                        if(mutation_output_str.equals(model_output_str)){
-                            passedNumber ++;
-                        }else{
-                            failedNumber ++;
+                        //读变异体的输出
+                        FileReader mutationOutputReader = new FileReader(basicSourceFile + "JavaTestResult" + File.separator + "threeWordPlus_output.txt");
+                        BufferedReader mutationOutputCase = new BufferedReader(mutationOutputReader);
+
+                        //输入的每行，期待输出的每行
+                        String mutation_output_str = null;
+                        String model_output_str = null;
+
+                        //对每一个测试用例
+                        while ((mutation_output_str = outputCase.readLine()) != null && (model_output_str = mutationOutputCase.readLine()) != null) {
+                            System.out.println(mutation_output_str + "     " + model_output_str);
+                            if (mutation_output_str.equals(model_output_str)) {
+                                passedNumber++;
+                            } else {
+                                failedNumber++;
+                            }
+
                         }
 
+                        outputExceptionReader.close();
+                        outputCase.close();
+                        mutationOutputReader.close();
+                        mutationOutputCase.close();
+
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+
+                        e.printStackTrace();
                     }
 
-                    outputExceptionReader.close();
-                    outputCase.close();
-                    mutationOutputReader.close();
-                    mutationOutputCase.close();
+                    System.out.println("passed : " + passedNumber + "  failed : " + failedNumber);
 
+                    if (passedNumber == 9) {
+                        System.out.println("find the correct mutation : " + mutant_file.getAbsolutePath());
+                        findCorrectMutationFlag = true;
+                        break;
+                    }
+
+                    //计算适应度，每个变异体一个适应度，按适应度排序，取前50%
+                    Double fitness = new Double(0);
+                    if (passedNumber + failedNumber != 0) {
+                        fitness = Double.valueOf(passedNumber / (passedNumber + failedNumber));
+                    } else {
+                        fitness = Double.valueOf(0);
+                    }
+
+
+                    //变异体的变异序列，与适应度，映射
+                    fitnessMap.put(group.get(mutationNumber - 1), fitness);
                 }
-                catch(FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-                catch(IOException e) {
-
-                    e.printStackTrace();
-                }
-
-                System.out.println("passed : " + passedNumber + "  failed : " + failedNumber);
-
-                if(passedNumber == 9){
-                    System.out.println("find the correct mutation : " + mutation_file.getAbsolutePath());
-                    findCorrectMutationFlag = true;
-                    break;
-                }
-
-                //计算适应度，每个变异体一个适应度，按适应度排序，取前50%
-                Double fitness = new Double(0);
-                if(passedNumber + failedNumber != 0){
-                    fitness = Double.valueOf(passedNumber/(passedNumber + failedNumber));
-                }
-                else{
-                    fitness = Double.valueOf(0);
-                }
-
-
-                //变异体的变异序列，与适应度，映射
-                fitnessMap.put(group.get(mutationNumber-1), fitness);
-
             }//全部执行完毕
 
             //跳出while循环,找到正确程序
@@ -283,7 +261,7 @@ public class JavaGenProg {
                     //每个变异体的下一步动作，随机生成个数，暂时全是replace动作
                     double random = Math.random();
                     int mutationRandomAct = (int) (random * sizeOfSource);
-                    System.out.println("random = " + mutationRandomAct);
+                   // System.out.println("random = " + mutationRandomAct);
 
                     int modelRandomAct = 0;
                     int sameFatherCnt = 0;
@@ -293,7 +271,7 @@ public class JavaGenProg {
                         modelRandomAct = (int) (random * sizeOfModel);
                         if(!sourceNodeList.get(mutationRandomAct).toString().equals(nodeList.get(modelRandomAct).toString())
                                 && sourceNodeList.get(mutationRandomAct).getParent().getNodeType() == nodeList.get(modelRandomAct).getParent().getNodeType()){
-                            System.out.println("random = " + modelRandomAct);
+                            //System.out.println("random = " + modelRandomAct);
                             break;
                         }
 
@@ -387,7 +365,11 @@ public class JavaGenProg {
                     }
                     else if(j % 3 == 2){
                         TextElement textElement = ast.newTextElement();
-                        textElement.setText(nodeList.get(mutant.get(j)).toString());
+                        String modelNode = nodeList.get(mutant.get(j)).toString();
+                        textElement.setText(modelNode);//模板拷贝过来的代码，这段代码去映射表里查，替换
+        //代码是一段字符串String，遍历映射表，每一个key用 modelNode.contains(key)检查是否包含，如果包含key，用 modelNode.replace(key,value)做替换
+                        //不包含key继续遍历映射表 MutationMap.mutationMap,在前面传参执行MutationMap.mutationMap就可以了
+                        //此处直接调用映射表key:modelNode,value:sourceNode，做个遍历
 
                         rewriter.replace(sourceNodeList.get(mutant.get(j-1)),
                                 textElement, textEdits);//rewriter.remove(sourceNodeList.get(i), textEdits);

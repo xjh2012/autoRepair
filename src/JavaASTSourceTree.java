@@ -23,7 +23,7 @@ import java.util.Map;
  * Created by xjh on 2017/12/12.
  */
 public class JavaASTSourceTree {
-    public Map<String,List<String>> modelMap=new HashMap<>();
+    public static Map<String,List<String>> modelMap=new HashMap<>();
 
     public JavaASTSourceTree() throws BadLocationException, CoreException {
         try {
@@ -57,18 +57,18 @@ public class JavaASTSourceTree {
         JavaVisitor javaVisitor = new JavaVisitor();
         unit.accept(javaVisitor);
 
-//        try {
-//            AddStatements();
-//        } catch (MalformedTreeException e) {
-//            e.printStackTrace();
-//        } catch (BadLocationException e) {
-//            e.printStackTrace();
-//        } catch (CoreException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            AddStatements();
+        } catch (MalformedTreeException e) {
+            e.printStackTrace();
+        } catch (BadLocationException e) {
+            e.printStackTrace();
+        } catch (CoreException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void AddStatements() throws MalformedTreeException, BadLocationException, CoreException {
+    public static void AddStatements() throws MalformedTreeException, BadLocationException, CoreException {
 
 //        IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject("testAddComments");
 //        IJavaProject javaProject = JavaCore.create(project);
@@ -215,7 +215,7 @@ public class JavaASTSourceTree {
             DynamicCompileTest dynamicCompileTest = new DynamicCompileTest();
             dynamicCompileTest.compile(sourceDir, exe_mutation_name);
 
-            this.modelMap = dynamicCompileTest.map;
+           modelMap = dynamicCompileTest.map;
 
 //            for (Map.Entry<String,List<String>> entry : this.modelMap.entrySet()) {
 //                System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());

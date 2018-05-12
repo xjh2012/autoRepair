@@ -1,10 +1,5 @@
-import org.eclipse.core.resources.IProject;
-import org.eclipse.core.resources.ResourcesPlugin;
+
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.jdt.core.ICompilationUnit;
-import org.eclipse.jdt.core.IJavaProject;
-import org.eclipse.jdt.core.IPackageFragment;
-import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.dom.*;
 import org.eclipse.jdt.core.dom.rewrite.ASTRewrite;
 import org.eclipse.jdt.core.dom.rewrite.ListRewrite;
@@ -12,6 +7,7 @@ import org.eclipse.jface.text.BadLocationException;
 import org.eclipse.jface.text.Document;
 import org.eclipse.text.edits.MalformedTreeException;
 import org.eclipse.text.edits.TextEdit;
+import org.eclipse.text.edits.TextEditGroup;
 import util.DynamicCompileTest;
 
 import java.io.*;
@@ -23,7 +19,7 @@ import java.util.Map;
  * Created by xjh on 2017/12/12.
  */
 public class JavaASTTree {
-    public Map<String,List<String>> modelMap=new HashMap<>();
+    public static Map<String,List<String>> modelMap=new HashMap<>();
 
     public JavaASTTree() throws BadLocationException, CoreException {
         try {
@@ -57,18 +53,38 @@ public class JavaASTTree {
         JavaVisitor javaVisitor = new JavaVisitor();
         unit.accept(javaVisitor);
 
-//        try {
-//            AddStatements();
-//        } catch (MalformedTreeException e) {
-//            e.printStackTrace();
-//        } catch (BadLocationException e) {
-//            e.printStackTrace();
-//        } catch (CoreException e) {
-//            e.printStackTrace();
-//        }
+//        Document document;
+//        document = new Document(fileString);
+//
+//        ASTRewrite rewriter = ASTRewrite.create(unit.getAST());
+//
+//        TextEditGroup textEdits = new TextEditGroup("test");
+//
+//        rewriter.remove(javaVisitor.mainStatement, textEdits);
+//
+//        TextEdit edits = rewriter.rewriteAST(document, null);
+//        edits.apply(document);
+//
+//        System.out.println(document.get());
+        //输入到文件中，变异体
+//        String mutationFile = basicSourceFile  + "JavaMutation" + File.separator + "TNPMutation" + ".java";
+//
+//        T.writeFile(mutationFile, document.get());
+//
+
+
+        try {
+            AddStatements();
+        } catch (MalformedTreeException e) {
+            e.printStackTrace();
+        } catch (BadLocationException e) {
+            e.printStackTrace();
+        } catch (CoreException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void AddStatements() throws MalformedTreeException, BadLocationException, CoreException {
+    public static void AddStatements() throws MalformedTreeException, BadLocationException, CoreException {
 
 //        IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject("testAddComments");
 //        IJavaProject javaProject = JavaCore.create(project);
@@ -190,7 +206,7 @@ public class JavaASTTree {
 
         edits.apply(document);
 
-        System.out.println(document.get());
+        //System.out.println(document.get());
 
         //输入到文件中，变异体
         String mutationFile = basicSourceFile  + "instrumentation" + File.separator + "TNPMutation.java";
@@ -215,11 +231,11 @@ public class JavaASTTree {
             DynamicCompileTest dynamicCompileTest = new DynamicCompileTest();
             dynamicCompileTest.compile(sourceDir, exe_mutation_name);
 
-            this.modelMap = dynamicCompileTest.map;
+            modelMap = dynamicCompileTest.map;
 
-//            for (Map.Entry<String,List<String>> entry : this.modelMap.entrySet()) {
-//                System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
-//            }
+            for (Map.Entry<String,List<String>> entry : modelMap.entrySet()) {
+                System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+            }
 
         }
         catch(FileNotFoundException e) {

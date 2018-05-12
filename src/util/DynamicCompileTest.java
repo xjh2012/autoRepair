@@ -65,7 +65,7 @@ public class DynamicCompileTest {
         String info = "";//执行输出的东西
         while ((info = reader.readLine()) != null) {
 
-
+//System.out.println("info         "+info);
 
             if(info.contains("instrumentation") && info.split(" ").length == 3 && !info.split(" ")[2].isEmpty()){
                 String str1 = info.split(" ")[1];

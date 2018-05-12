@@ -1,5 +1,4 @@
-import jdk.nashorn.internal.ir.BlockStatement;
-import org.eclipse.cdt.core.dom.ast.IASTNode;
+
 import org.eclipse.jdt.core.dom.*;
 
 import java.util.ArrayList;
@@ -11,7 +10,7 @@ import java.util.List;
 public class JavaVisitor extends ASTVisitor {
 
     public List<ASTNode> nodeList = new ArrayList<>();
-
+    public ASTNode mainStatement;
 
     List<Assignment> assignment = new ArrayList<>();
     List<VariableDeclarationStatement> vds = new ArrayList<>();
@@ -50,7 +49,7 @@ public class JavaVisitor extends ASTVisitor {
     public boolean visit(WhileStatement node) {
 
         //System.out.println(node);
-        nodeList.add(node);
+        //nodeList.add(node);
         return true;
     }
 
@@ -70,9 +69,10 @@ public class JavaVisitor extends ASTVisitor {
 
     public boolean visit(MethodDeclaration node) {
 
-        System.out.println(node.getName());
+       // System.out.println(node.getName());
         if(node.getName().toString().equals("main")){
-            System.out.println(node.getBody().getParent() );
+            //System.out.println(node.getBody().getParent() );
+            mainStatement = node.getBody().getParent();
         }
         //nodeList.add(node);
         return true;

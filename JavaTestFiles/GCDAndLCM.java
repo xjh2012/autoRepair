@@ -9,7 +9,7 @@ import java.util.ArrayList;
  *2.辗转相除法基于如下原理：两个整数的最大公约数等于其中较小的数和两数的相除余数的最大公约数。 
  *3.最小公倍数等于两数之积除以最大公约数
  */
-public class threeNumbersPlus {
+public class GCDAndLCM {
 
     /**
      * 最大公约数普通求法
@@ -78,9 +78,7 @@ public class threeNumbersPlus {
             String[] inputs = input_str.split(" ");//测试用例元素组
 
             int m = 0, n = 0;
-            if (m % n == 0) return n;
-			 else return getGCD(n,m % n);
-			
+            m = Integer.parseInt(inputs[0]);
             n = Integer.parseInt(inputs[1]);
 
             String sum_str = String.valueOf(GCDAndLCM(m,n)[0]) + " " + String.valueOf(GCDAndLCM(m,n)[1]) +"\n";

@@ -5,6 +5,7 @@ import org.eclipse.jface.text.BadLocationException;
 import java.util.*;
 
 public class testsaima {
+
     public static void main(String[] args) throws BadLocationException, CoreException {
         JavaASTTree javaASTTree = new JavaASTTree();
         Map<String,List<String>> modelMap=new HashMap<>();
@@ -22,7 +23,7 @@ public class testsaima {
                // System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
                LCSforArray lcSforArray = new LCSforArray();
                int lcsLength = lcSforArray.LCS(entry.getValue(), entrySource.getValue());
-               System.out.println("ModelValue = " + entry.getValue() + ", SourceValue = " + entrySource.getValue() + ", LCS = " + lcsLength);
+               //System.out.println("ModelValue = " + entry.getValue() + ", SourceValue = " + entrySource.getValue() + ", LCS = " + lcsLength);
                if(lcsLength > max) {
                    max = lcsLength;
                    similar = entrySource.getKey();

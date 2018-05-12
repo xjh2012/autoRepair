@@ -10,9 +10,9 @@ import java.util.Scanner;
 public class threeNumbersPlus {
     public static void main(String[] args) throws IOException {
         // new CppASTTree();
-        int ans = 0;
+        int sum = 0;
         // Scanner sc = new Scanner(System.in);
-		System.out.println("instrumentation " + "ans" + " " + ans);
+		System.out.println("instrumentation " + "sum" + " " + sum);
 
         // read file content from file
         StringBuffer sb = new StringBuffer("");
@@ -47,22 +47,22 @@ public class threeNumbersPlus {
 			System.out.println("instrumentation " + "input" + " " + input);
             inputTest=input.length;
 			System.out.println("instrumentation " + "inputTest" + " " + inputTest);
-            ans = 0;
-			System.out.println("instrumentation " + "ans" + " " + ans);
+            sum = 0;
+			System.out.println("instrumentation " + "sum" + " " + sum);
             for(int i = 0; i < inputTest; i ++){
                 String inputKeyboard = input[i];
 				System.out.println("instrumentation " + "inputKeyboard" + " " + inputKeyboard);
-                int y = Integer.parseInt(inputKeyboard);
-				System.out.println("instrumentation " + "y" + " " + y);
+                int x = Integer.parseInt(inputKeyboard);
+				System.out.println("instrumentation " + "x" + " " + x);
 
-                ans += y + 1;
-				System.out.println("instrumentation " + "ans" + " " + ans);
+                sum += 1;
+				System.out.println("instrumentation " + "sum" + " " + sum);
 
             }
             // System.out.println(input_str + " =  " + output_str);
 
-            System.out.println(ans);
-            String sum_str = String.valueOf(ans) +"\n";
+            System.out.println(sum);
+            String sum_str = String.valueOf(sum) +"\n";
 			System.out.println("instrumentation " + "sum_str" + " " + sum_str);
             fw.write(sum_str , 0, sum_str.length());
 
