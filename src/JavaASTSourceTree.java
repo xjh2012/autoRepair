@@ -25,9 +25,9 @@ import java.util.Map;
 public class JavaASTSourceTree {
     public static Map<String,List<String>> modelMap=new HashMap<>();
 
-    public JavaASTSourceTree() throws BadLocationException, CoreException {
+    public JavaASTSourceTree(CompilationUnit modelUnit, JavaVisitor javaVisitor, String fileString) throws BadLocationException, CoreException {
         try {
-            AddStatements();
+            AddStatements(modelUnit,javaVisitor,fileString);
         } catch (MalformedTreeException e) {
             e.printStackTrace();
         } catch (BadLocationException e) {
@@ -58,7 +58,7 @@ public class JavaASTSourceTree {
         unit.accept(javaVisitor);
 
         try {
-            AddStatements();
+            AddStatements(unit,javaVisitor,fileString);
         } catch (MalformedTreeException e) {
             e.printStackTrace();
         } catch (BadLocationException e) {
@@ -68,7 +68,7 @@ public class JavaASTSourceTree {
         }
     }
 
-    public static void AddStatements() throws MalformedTreeException, BadLocationException, CoreException {
+    public static void AddStatements(CompilationUnit modelUnit, JavaVisitor javaVisitor, String fileString) throws MalformedTreeException, BadLocationException, CoreException {
 
 //        IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject("testAddComments");
 //        IJavaProject javaProject = JavaCore.create(project);
@@ -84,15 +84,15 @@ public class JavaASTSourceTree {
         String basicSourceFile = System.getProperty("user.dir") + File.separator;
 
         //模板程序,语法分析
-        String modelSourceFile = basicSourceFile + "JavaTestFiles" + File.separator + "threeNumbersPlus.java";
-        File file = new File(modelSourceFile);//模板程序路径
-        JavaParser javaParser = new JavaParser();//模板程序的语法树
-        String fileString = javaParser.getCode(file);//模板程序内容
-
-        CompilationUnit modelUnit = javaParser.getCompilationUnit(fileString);
-        JavaVisitor javaVisitor = new JavaVisitor();
-        modelUnit.accept(javaVisitor);
-        List<ExpressionStatement> nodeList = javaVisitor.es;//模板的节点列表
+//        String modelSourceFile = basicSourceFile + "JavaTestFiles" + File.separator + "threeNumbersPlus.java";
+//        File file = new File(modelSourceFile);//模板程序路径
+//        JavaParser javaParser = new JavaParser();//模板程序的语法树
+//        String fileString = javaParser.getCode(file);//模板程序内容
+//
+//        CompilationUnit modelUnit = javaParser.getCompilationUnit(fileString);
+//        JavaVisitor javaVisitor = new JavaVisitor();
+//        modelUnit.accept(javaVisitor);
+//        List<ExpressionStatement> nodeList = javaVisitor.es;//模板的节点列表
 
         // create a ASTRewrite
         AST ast = modelUnit.getAST();

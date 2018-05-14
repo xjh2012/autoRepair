@@ -43,17 +43,17 @@ public class SourceJavaASTTree {
         JavaVisitor javaVisitor = new JavaVisitor();
         unit.accept(javaVisitor);
 
-        JavaASTTree javaASTTree = new JavaASTTree();
+        //JavaASTTree javaASTTree = new JavaASTTree();
 
-        try {
-            AddStatements(javaASTTree);
-        } catch (MalformedTreeException e) {
-            e.printStackTrace();
-        } catch (BadLocationException e) {
-            e.printStackTrace();
-        } catch (CoreException e) {
-            e.printStackTrace();
-        }
+//        try {
+//           // AddStatements(javaASTTree);
+//        } catch (MalformedTreeException e) {
+//            e.printStackTrace();
+//        } catch (BadLocationException e) {
+//            e.printStackTrace();
+//        } catch (CoreException e) {
+//            e.printStackTrace();
+//        }
     }
 
     private static void AddStatements(JavaASTTree javaASTTree) throws MalformedTreeException, BadLocationException, CoreException {

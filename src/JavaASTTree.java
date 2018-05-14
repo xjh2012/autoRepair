@@ -21,9 +21,9 @@ import java.util.Map;
 public class JavaASTTree {
     public static Map<String,List<String>> modelMap=new HashMap<>();
 
-    public JavaASTTree() throws BadLocationException, CoreException {
+    public JavaASTTree(CompilationUnit modelUnit, JavaVisitor javaVisitor, String fileString) throws BadLocationException, CoreException {
         try {
-            AddStatements();
+            AddStatements(modelUnit,javaVisitor,fileString);
         } catch (MalformedTreeException e) {
             e.printStackTrace();
         } catch (BadLocationException e) {
@@ -74,7 +74,7 @@ public class JavaASTTree {
 
 
         try {
-            AddStatements();
+            AddStatements(unit,javaVisitor,fileString);
         } catch (MalformedTreeException e) {
             e.printStackTrace();
         } catch (BadLocationException e) {
@@ -84,7 +84,7 @@ public class JavaASTTree {
         }
     }
 
-    public static void AddStatements() throws MalformedTreeException, BadLocationException, CoreException {
+    public static void AddStatements(CompilationUnit modelUnit, JavaVisitor javaVisitor, String fileString) throws MalformedTreeException, BadLocationException, CoreException {
 
 //        IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject("testAddComments");
 //        IJavaProject javaProject = JavaCore.create(project);
@@ -98,31 +98,31 @@ public class JavaASTTree {
 
         //E:\autoRepair\
         String basicSourceFile = System.getProperty("user.dir") + File.separator;
-
-        //模板程序,语法分析
-        String modelSourceFile = basicSourceFile + "JavaModelProgram" + File.separator + "threeNumbersPlus.java";
-        File file = new File(modelSourceFile);//模板程序路径
-        JavaParser javaParser = new JavaParser();//模板程序的语法树
-        String fileString = javaParser.getCode(file);//模板程序内容
-
-        CompilationUnit modelUnit = javaParser.getCompilationUnit(fileString);
-        JavaVisitor javaVisitor = new JavaVisitor();
-        modelUnit.accept(javaVisitor);
-        List<ExpressionStatement> nodeList = javaVisitor.es;//模板的节点列表
+//
+//        //模板程序,语法分析
+//        String modelSourceFile = basicSourceFile + "JavaModelProgram" + File.separator + "threeNumbersPlus.java";
+//        File file = new File(modelSourceFile);//模板程序路径
+//        JavaParser javaParser = new JavaParser();//模板程序的语法树
+//        String fileString = javaParser.getCode(file);//模板程序内容
+//
+//        CompilationUnit modelUnit = javaParser.getCompilationUnit(fileString);
+//        JavaVisitor javaVisitor = new JavaVisitor();
+//        modelUnit.accept(javaVisitor);
+       // List<ExpressionStatement> nodeList = javaVisitor.es;//模板的节点列表
 
         // create a ASTRewrite
         AST ast = modelUnit.getAST();
         ASTRewrite rewriter = ASTRewrite.create(ast);
 
         // for getting insertion position
-        TypeDeclaration typeDecl = (TypeDeclaration) modelUnit.types().get(0);
-        MethodDeclaration methodDecl = typeDecl.getMethods()[0];
-        Block block = methodDecl.getBody();
+        //TypeDeclaration typeDecl = (TypeDeclaration) modelUnit.types().get(0);
+        //MethodDeclaration methodDecl = typeDecl.getMethods()[0];
+       // Block block = methodDecl.getBody();
 
         // create new statements for insertion
-        MethodInvocation newInvocation = ast.newMethodInvocation();
-        newInvocation.setName(ast.newSimpleName("add"));
-        Statement newStatement = ast.newExpressionStatement(newInvocation);
+        //MethodInvocation newInvocation = ast.newMethodInvocation();
+        //newInvocation.setName(ast.newSimpleName("add"));
+        //Statement newStatement = ast.newExpressionStatement(newInvocation);
 
 
 
@@ -193,7 +193,7 @@ public class JavaASTTree {
 
 
         //create ListRewrite
-        ListRewrite listRewrite = rewriter.getListRewrite(block, Block.STATEMENTS_PROPERTY);
+      //  ListRewrite listRewrite = rewriter.getListRewrite(block, Block.STATEMENTS_PROPERTY);
 
 //        System.out.println(listRewrite.getOriginalList());
 

@@ -10,13 +10,13 @@ public class MutationMap {
     public static void mutationMap() throws BadLocationException, CoreException {
         //这段改成模板程序和源程序代码分别执行JAvaASTTree（filename），设置传参，得到两个程序的key和value值
 
-        JavaASTTree javaASTTree = new JavaASTTree();
+        //JavaASTTree javaASTTree = new JavaASTTree();
         Map<String,List<String>> modelMap=new HashMap<>();
-        modelMap = javaASTTree.modelMap;//模板程序的map执行值序列, key:变量名，value:值序列
+        //modelMap = javaASTTree.modelMap;//模板程序的map执行值序列, key:变量名，value:值序列
 
-        JavaASTSourceTree javaASTSourceTree = new JavaASTSourceTree();
+        //JavaASTSourceTree javaASTSourceTree = new JavaASTSourceTree();
         Map<String,List<String>> sourcelMap=new HashMap<>();
-        sourcelMap = javaASTSourceTree.modelMap;//原程序的map执行值序列
+        //sourcelMap = javaASTSourceTree.modelMap;//原程序的map执行值序列
 
 
         //不用改，两个程序的变量值和序列用LCS匹配

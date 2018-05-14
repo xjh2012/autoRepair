@@ -2,245 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5b739e7-33cb-4546-810d-4455190cd8da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MutationMap.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation100.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation101.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation102.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation103.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation104.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation105.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation106.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation107.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation108.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation109.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation110.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation111.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation112.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation113.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation114.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation115.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation116.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation117.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation118.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation119.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation120.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation121.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation122.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation123.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation124.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation125.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation126.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation127.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation128.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation129.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation130.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation131.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation132.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation133.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation134.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation135.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation136.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation137.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation138.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation139.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation140.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation141.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation142.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation143.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation144.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation145.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation146.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation147.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation148.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation149.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation150.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation151.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation152.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation153.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation154.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation155.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation156.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation157.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation158.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation159.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation160.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation161.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation162.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation163.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation164.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation165.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation166.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation167.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation168.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation169.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation170.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation171.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation172.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation173.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation174.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation175.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation176.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation177.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation178.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation179.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation180.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation181.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation182.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation183.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation184.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation185.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation186.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation187.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation188.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation189.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation190.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation191.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation192.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation193.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation194.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation195.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation196.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation197.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation198.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation199.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation200.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation201.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation202.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation203.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation204.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation205.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation206.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation207.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation208.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation209.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation210.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation211.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation212.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation213.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation214.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation215.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation216.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation217.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation94.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation95.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation96.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation97.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation98.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation99.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaMutation/threeNumbersPlus.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/autoRepair/JavaASTSourceTree.class" afterPath="$PROJECT_DIR$/out/production/autoRepair/JavaASTSourceTree.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/autoRepair/JavaASTTree.class" afterPath="$PROJECT_DIR$/out/production/autoRepair/JavaASTTree.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/autoRepair/JavaGenProg.class" afterPath="$PROJECT_DIR$/out/production/autoRepair/JavaGenProg.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/autoRepair/JavaVisitor.class" afterPath="$PROJECT_DIR$/out/production/autoRepair/JavaVisitor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/autoRepair/SourceJavaASTTree.class" afterPath="$PROJECT_DIR$/out/production/autoRepair/SourceJavaASTTree.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/autoRepair/testsaima.class" afterPath="$PROJECT_DIR$/out/production/autoRepair/testsaima.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/threeNumbersPlus.class" afterPath="$PROJECT_DIR$/temp/threeNumbersPlus.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/util/threeNumbersPlus.class" afterPath="$PROJECT_DIR$/temp/util/threeNumbersPlus.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaModelProgram/threeNumbersPlus.java" afterPath="$PROJECT_DIR$/JavaModelProgram/threeNumbersPlus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation1.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation10.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation10.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation11.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation11.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation12.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation12.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation13.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation13.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation14.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation14.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation15.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation15.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation16.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation16.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation17.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation17.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation18.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation18.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation19.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation19.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation2.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation20.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation20.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation21.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation21.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation22.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation22.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation23.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation23.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation24.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation24.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation25.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation25.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation26.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation26.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation27.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation27.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation28.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation28.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation29.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation29.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation3.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation3.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation30.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation30.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation31.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation31.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation32.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation32.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation33.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation33.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation34.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation34.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation35.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation35.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation36.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation36.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation37.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation37.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation38.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation38.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation39.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation39.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation4.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation4.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation40.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation40.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation41.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation41.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation42.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation42.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation43.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation43.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation44.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation44.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation45.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation45.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation46.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation46.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation47.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation47.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation48.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation48.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation49.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation49.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation5.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation5.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation50.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation50.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation51.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation51.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation52.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation52.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation53.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation53.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation54.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation54.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation55.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation55.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation56.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation56.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation57.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation57.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation58.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation58.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation59.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation59.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation6.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation6.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation60.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation60.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation61.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation61.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation62.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation62.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation63.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation63.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation64.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation64.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation65.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation65.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation66.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation66.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation67.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation67.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation68.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation68.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation69.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation69.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation7.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation7.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation70.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation70.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation71.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation71.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation72.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation72.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation73.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation73.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation74.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation74.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation75.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation75.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation76.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation76.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation77.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation77.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation78.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation78.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation79.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation79.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation8.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation8.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation80.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation80.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation81.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation81.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation82.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation82.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation83.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation83.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation84.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation84.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation85.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation85.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation86.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation86.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation87.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation87.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation88.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation88.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation89.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation89.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation9.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation9.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation90.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation90.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation91.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation91.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation92.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation92.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaMutation/TNPMutation93.java" afterPath="$PROJECT_DIR$/JavaMutation/TNPMutation93.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaTestFiles/threeNumbersPlus.java" afterPath="$PROJECT_DIR$/JavaTestFiles/threeNumbersPlus.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaTestResult/threeWordPlus_output.txt" afterPath="$PROJECT_DIR$/JavaTestResult/threeWordPlus_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/instrumentation/TNPMutation.java" afterPath="$PROJECT_DIR$/instrumentation/TNPMutation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/instrumentation/threeNumbersPlus.java" afterPath="$PROJECT_DIR$/instrumentation/threeNumbersPlus.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JavaASTSourceTree.java" afterPath="$PROJECT_DIR$/src/JavaASTSourceTree.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JavaASTTree.java" afterPath="$PROJECT_DIR$/src/JavaASTTree.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JavaGenProg.java" afterPath="$PROJECT_DIR$/src/JavaGenProg.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JavaVisitor.java" afterPath="$PROJECT_DIR$/src/JavaVisitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MutationMap.java" afterPath="$PROJECT_DIR$/src/MutationMap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SourceJavaASTTree.java" afterPath="$PROJECT_DIR$/src/SourceJavaASTTree.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/testsaima.java" afterPath="$PROJECT_DIR$/src/testsaima.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/DynamicCompileTest.java" afterPath="$PROJECT_DIR$/src/util/DynamicCompileTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -255,8 +30,8 @@
       <file leaf-file-name="JavaGenProg.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/JavaGenProg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="377" column="0" lean-forward="true" selection-start-line="377" selection-start-column="0" selection-end-line="377" selection-end-column="0" />
+            <state relative-caret-position="737">
+              <caret line="53" column="36" lean-forward="false" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#delAllFile#0;class#JavaGenProg#0" expanded="false" />
@@ -265,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JavaASTTree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/JavaASTTree.java">
+      <file leaf-file-name="MutationMap.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MutationMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3373">
-              <caret line="233" column="14" lean-forward="false" selection-start-line="233" selection-start-column="14" selection-end-line="233" selection-end-column="14" />
+            <state relative-caret-position="238">
+              <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -280,18 +55,30 @@
       <file leaf-file-name="SourceJavaASTTree.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SourceJavaASTTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2985">
-              <caret line="218" column="0" lean-forward="false" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
+            <state relative-caret-position="540">
+              <caret line="55" column="11" lean-forward="false" selection-start-line="47" selection-start-column="10" selection-end-line="55" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LCSforArray.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LCSforArray.java">
+      <file leaf-file-name="JavaASTTree.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JavaASTTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="45" column="17" lean-forward="false" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="18" />
+            <state relative-caret-position="-2979">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JavaASTSourceTree.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JavaASTSourceTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -300,64 +87,8 @@
       <file leaf-file-name="testsaima.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/testsaima.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="59" column="5" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="59" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MutationMap.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MutationMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JavaParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/JavaParser.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JavaASTSourceTree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/JavaASTSourceTree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2025">
-              <caret line="154" column="39" lean-forward="false" selection-start-line="154" selection-start-column="39" selection-end-line="154" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DynamicCompileTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/DynamicCompileTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JavaVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/JavaVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="51" column="10" lean-forward="false" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+              <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -442,7 +173,6 @@
         <option value="$PROJECT_DIR$/lib/org.eclipse.jdt.core_3.13.0.v20170516-1929.jar!/org/eclipse/jdt/internal/core/dom/rewrite/TokenScanner.class" />
         <option value="$PROJECT_DIR$/lib/org.eclipse.text_3.6.0.v20160503-1849.jar!/org/eclipse/jface/text/Document.class" />
         <option value="$PROJECT_DIR$/src/Compare.java" />
-        <option value="$PROJECT_DIR$/src/SourceJavaASTTree.java" />
         <option value="$PROJECT_DIR$/src/TestCPPASTTree.java" />
         <option value="$PROJECT_DIR$/src/LCSTest.java" />
         <option value="$PROJECT_DIR$/src/LCSforArray.java" />
@@ -452,12 +182,13 @@
         <option value="$PROJECT_DIR$/src/testforinterview.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/JavaVisitor.java" />
-        <option value="$PROJECT_DIR$/src/JavaASTTree.java" />
         <option value="$PROJECT_DIR$/src/util/DynamicCompileTest.java" />
+        <option value="$PROJECT_DIR$/src/JavaASTTree.java" />
         <option value="$PROJECT_DIR$/src/JavaASTSourceTree.java" />
-        <option value="$PROJECT_DIR$/src/testsaima.java" />
         <option value="$PROJECT_DIR$/src/MutationMap.java" />
         <option value="$PROJECT_DIR$/src/JavaGenProg.java" />
+        <option value="$PROJECT_DIR$/src/testsaima.java" />
+        <option value="$PROJECT_DIR$/src/SourceJavaASTTree.java" />
       </list>
     </option>
   </component>
@@ -560,7 +291,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.testsaima">
+  <component name="RunManager" selected="Application.JavaGenProg">
     <configuration name="JavaASTSourceTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="JavaASTSourceTree" />
@@ -1074,11 +805,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.testsaima" />
-        <item index="1" class="java.lang.String" itemvalue="Application.SourceJavaASTTree" />
-        <item index="2" class="java.lang.String" itemvalue="Application.JavaASTSourceTree" />
-        <item index="3" class="java.lang.String" itemvalue="Application.JavaASTTree" />
-        <item index="4" class="java.lang.String" itemvalue="Application.JavaGenProg" />
+        <item index="0" class="java.lang.String" itemvalue="Application.JavaGenProg" />
+        <item index="1" class="java.lang.String" itemvalue="Application.JavaASTTree" />
+        <item index="2" class="java.lang.String" itemvalue="Application.testsaima" />
+        <item index="3" class="java.lang.String" itemvalue="Application.SourceJavaASTTree" />
+        <item index="4" class="java.lang.String" itemvalue="Application.JavaASTSourceTree" />
       </list>
     </recent_temporary>
   </component>
@@ -1129,16 +860,15 @@
       <workItem from="1524656070265" duration="5928000" />
       <workItem from="1525671458030" duration="11319000" />
       <workItem from="1525876951801" duration="4109000" />
-      <workItem from="1526027948268" duration="3984000" />
+      <workItem from="1526027948268" duration="7201000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="351286000" />
+    <option name="totallyTimeSpent" value="354503000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1148,7 +878,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24588235" sideWeight="0.50555557" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45294118" sideWeight="0.49444443" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33647057" sideWeight="0.49444443" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1156,6 +886,7 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19513889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20235294" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1171,7 +902,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20235294" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1501,14 +1231,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SourceJavaASTTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2985">
-          <caret line="218" column="0" lean-forward="false" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LCSforArray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -1524,14 +1246,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JavaASTSourceTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="154" column="39" lean-forward="false" selection-start-line="154" selection-start-column="39" selection-end-line="154" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1555,20 +1269,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testsaima.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="59" column="5" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="59" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MutationMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        <state relative-caret-position="238">
+          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1577,18 +1281,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaASTTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3373">
-          <caret line="233" column="14" lean-forward="false" selection-start-line="233" selection-start-column="14" selection-end-line="233" selection-end-column="14" />
+        <state relative-caret-position="-2979">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/testsaima.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SourceJavaASTTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="55" column="11" lean-forward="false" selection-start-line="47" selection-start-column="10" selection-end-line="55" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JavaASTSourceTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaGenProg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="377" column="0" lean-forward="true" selection-start-line="377" selection-start-column="0" selection-end-line="377" selection-end-column="0" />
+        <state relative-caret-position="737">
+          <caret line="53" column="36" lean-forward="false" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#delAllFile#0;class#JavaGenProg#0" expanded="false" />

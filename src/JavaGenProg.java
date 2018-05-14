@@ -16,10 +16,10 @@ import java.util.*;
  */
 public class JavaGenProg {
     //E:\autoRepair\
-    private static String sourceFile = System.getProperty("user.dir") + File.separator;
+    //private static String sourceFile = System.getProperty("user.dir") + File.separator;
 
     public static void main(String[] args) throws CoreException, IOException, InterruptedException, BadLocationException {
-
+        Map<String,String> mutationMap = new HashMap<>();//变量映射表
         //E:\autoRepair\
         String basicSourceFile = System.getProperty("user.dir") + File.separator;
 
@@ -33,6 +33,12 @@ public class JavaGenProg {
         JavaVisitor javaVisitor = new JavaVisitor();
         modelUnit.accept(javaVisitor);
         List<ASTNode> nodeList = javaVisitor.nodeList;//模板的节点列表
+
+//这段改成模板程序和源程序代码分别执行JAvaASTTree（filename），设置传参，得到两个程序的key和value值
+
+        JavaASTTree javaASTTree = new JavaASTTree(modelUnit,javaVisitor,fileString);
+        Map<String,List<String>> modelMap=new HashMap<>();
+        modelMap = javaASTTree.modelMap;//模板程序的map执行值序列, key:变量名，value:值序列
 
         //需要纠正的程序JavaParser
         String sourceFile = basicSourceFile + "JavaTestFiles" + File.separator + "threeNumbersPlus.java";
@@ -48,6 +54,41 @@ public class JavaGenProg {
         LCSTest lcsTest = new LCSTest();
         lcsTest.LCS(nodeList,sourceNodeList);
 
+//这段改成模板程序和源程序代码分别执行JAvaASTTree（filename），设置传参，得到两个程序的key和value值
+
+        JavaASTSourceTree javaASTSourceTree = new JavaASTSourceTree(sourceUnit,sourceJavaVisitor,fileString);
+        Map<String,List<String>> sourcelMap=new HashMap<>();
+        sourcelMap = javaASTSourceTree.modelMap;//原程序的map执行值序列, key:变量名，value:值序列
+
+
+        //不用改，两个程序的变量值和序列用LCS匹配
+        for (Map.Entry<String,List<String>> entry : modelMap.entrySet()) {
+            int max = 0;//最多相似节点数
+            String similar = "";//对应相似节点
+
+            for(Map.Entry<String,List<String>> entrySource : sourcelMap.entrySet()){
+                // System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+                LCSforArray lcSforArray = new LCSforArray();
+                int lcsLength = lcSforArray.LCS(entry.getValue(), entrySource.getValue());
+                //System.out.println("ModelValue = " + entry.getValue() + ", SourceValue = " + entrySource.getValue() + ", LCS = " + lcsLength);
+                if(lcsLength > max) {
+                    max = lcsLength;
+                    similar = entrySource.getKey();
+                    if(max == entry.getValue().size()){
+                        break;
+                    }
+                }
+            }
+
+            // sourcelMap.remove(similar);
+
+            System.out.println("ModelKey = " + entry.getKey() + ", SourceKey = " + similar);
+            //获得变量映射表
+            mutationMap.put(entry.getKey(),similar);
+
+            System.out.println();
+
+        }
 
         int sizeOfModel = nodeList.size();
         int sizeOfSource = sourceNodeList.size();

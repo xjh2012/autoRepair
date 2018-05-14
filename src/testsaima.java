@@ -7,13 +7,13 @@ import java.util.*;
 public class testsaima {
 
     public static void main(String[] args) throws BadLocationException, CoreException {
-        JavaASTTree javaASTTree = new JavaASTTree();
+       //JavaASTTree javaASTTree = new JavaASTTree();
         Map<String,List<String>> modelMap=new HashMap<>();
-        modelMap = javaASTTree.modelMap;//模板程序的map执行值序列
+        //modelMap = javaASTTree.modelMap;//模板程序的map执行值序列
 
-        JavaASTSourceTree javaASTSourceTree = new JavaASTSourceTree();
+        //JavaASTSourceTree javaASTSourceTree = new JavaASTSourceTree();
         Map<String,List<String>> sourcelMap=new HashMap<>();
-        sourcelMap = javaASTSourceTree.modelMap;//原程序的map执行值序列
+        //sourcelMap = javaASTSourceTree.modelMap;//原程序的map执行值序列
 
         for (Map.Entry<String,List<String>> entry : modelMap.entrySet()) {
             int max = 0;//最多相似节点数
