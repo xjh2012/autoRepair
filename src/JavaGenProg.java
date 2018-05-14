@@ -20,6 +20,7 @@ public class JavaGenProg {
 
     public static void main(String[] args) throws CoreException, IOException, InterruptedException, BadLocationException {
         Map<String,String> mutationMap = new HashMap<>();//变量映射表
+
         //E:\autoRepair\
         String basicSourceFile = System.getProperty("user.dir") + File.separator;
 
@@ -40,7 +41,9 @@ public class JavaGenProg {
         Map<String,List<String>> modelMap=new HashMap<>();
         modelMap = javaASTTree.modelMap;//模板程序的map执行值序列, key:变量名，value:值序列
 
-        //需要纠正的程序JavaParser
+
+
+        //需要纠正的程序sourceJavaParser
         String sourceFile = basicSourceFile + "JavaTestFiles" + File.separator + "threeNumbersPlus.java";
         File sourceFilePath = new File(sourceFile);//源程序路径
         JavaParser sourceJavaParser = new JavaParser();//模板程序的语法树
@@ -51,9 +54,6 @@ public class JavaGenProg {
         sourceUnit.accept(sourceJavaVisitor);
         List<ASTNode> sourceNodeList = sourceJavaVisitor.nodeList;//错误源程序的节点列表
 
-        LCSTest lcsTest = new LCSTest();
-        lcsTest.LCS(nodeList,sourceNodeList);
-
 //这段改成模板程序和源程序代码分别执行JAvaASTTree（filename），设置传参，得到两个程序的key和value值
 
         JavaASTSourceTree javaASTSourceTree = new JavaASTSourceTree(sourceUnit,sourceJavaVisitor,fileString);
@@ -61,7 +61,7 @@ public class JavaGenProg {
         sourcelMap = javaASTSourceTree.modelMap;//原程序的map执行值序列, key:变量名，value:值序列
 
 
-        //不用改，两个程序的变量值和序列用LCS匹配
+        //不用改，两个程序的变量值和序列用LCS匹配，得到变量映射表mutationMap
         for (Map.Entry<String,List<String>> entry : modelMap.entrySet()) {
             int max = 0;//最多相似节点数
             String similar = "";//对应相似节点
@@ -83,6 +83,7 @@ public class JavaGenProg {
             // sourcelMap.remove(similar);
 
             System.out.println("ModelKey = " + entry.getKey() + ", SourceKey = " + similar);
+
             //获得变量映射表
             mutationMap.put(entry.getKey(),similar);
 
@@ -90,6 +91,9 @@ public class JavaGenProg {
 
         }
 
+        //计算节点权值
+        LCSTest lcsTest = new LCSTest();
+        lcsTest.LCS(nodeList,sourceNodeList);
         int sizeOfModel = nodeList.size();
         int sizeOfSource = sourceNodeList.size();
 
@@ -406,11 +410,19 @@ public class JavaGenProg {
                     }
                     else if(j % 3 == 2){
                         TextElement textElement = ast.newTextElement();
-                        String modelNode = nodeList.get(mutant.get(j)).toString();
-                        textElement.setText(modelNode);//模板拷贝过来的代码，这段代码去映射表里查，替换
-        //代码是一段字符串String，遍历映射表，每一个key用 modelNode.contains(key)检查是否包含，如果包含key，用 modelNode.replace(key,value)做替换
+                        String modelNode = nodeList.get(mutant.get(j)).toString();//模板拷贝过来的代码，这段代码去映射表里查，替换
+
+//代码是一段字符串String，遍历映射表，每一个key用 modelNode.contains(key)检查是否包含，如果包含key，用 modelNode.replace(key,value)做替换
                         //不包含key继续遍历映射表 MutationMap.mutationMap,在前面传参执行MutationMap.mutationMap就可以了
                         //此处直接调用映射表key:modelNode,value:sourceNode，做个遍历
+
+                        for (Map.Entry<String,String> entry : mutationMap.entrySet()) {
+                            if(modelNode.contains(entry.getKey())){
+                                modelNode.replaceAll(entry.getKey(),entry.getValue());
+                            }
+                        }
+
+                        textElement.setText(modelNode);
 
                         rewriter.replace(sourceNodeList.get(mutant.get(j-1)),
                                 textElement, textEdits);//rewriter.remove(sourceNodeList.get(i), textEdits);
